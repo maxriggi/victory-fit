@@ -1,0 +1,170 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer__inner container">
+    <div class="footer__brand">
+      <img src="/assets/logo-version-a-full.png" alt="Victory Fit" class="footer__logo" width="497" height="438" />
+      <p class="footer__tagline">Sportivement Metz.</p>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__nav">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/concept">Le Concept</a></li>
+        <li><a href="/coach">Le Coach</a></li>
+        <li><a href="/cours">Les Cours</a></li>
+        <li><a href="/coaching">Coaching</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__nav">
+      <h4>Infos Pratiques</h4>
+      <ul>
+        <li><a href="/planning">Planning</a></li>
+        <li><a href="/tarifs">Tarifs</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__contact">
+      <h4>Contact</h4>
+      <p>Centre-ville de Metz</p>
+      <p>Parking Saint-Jacques</p>
+      <a href="/contact" class="btn btn--primary" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.6rem 1.25rem;">
+        Essai gratuit
+      </a>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; {currentYear} Victory Fit. Tous droits reserves.</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-light);
+    border-top: 1px solid var(--white-10);
+    margin-top: 0;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem 3rem;
+  }
+
+  .footer__logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer__tagline {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--white-50);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__social {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .footer__social a {
+    color: var(--white-50);
+    transition: color 0.3s ease;
+  }
+
+  .footer__social a:hover {
+    color: var(--orange);
+  }
+
+  .footer__nav h4,
+  .footer__contact h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+  }
+
+  .footer__nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer__nav a {
+    color: var(--white-50);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+
+  .footer__nav a:hover {
+    color: var(--orange);
+  }
+
+  .footer__contact p {
+    font-size: 0.9rem;
+    color: var(--white-50);
+    line-height: 1.6;
+  }
+
+  .footer__bottom {
+    border-top: 1px solid var(--white-10);
+    padding: 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .footer__bottom p {
+    font-size: 0.8rem;
+    color: var(--white-50);
+  }
+
+  @media (max-width: 900px) {
+    .footer__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer__social {
+      justify-content: center;
+    }
+
+    .footer__bottom {
+      padding: 1rem;
+    }
+  }
+</style>

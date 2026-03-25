@@ -1,0 +1,177 @@
+---
+interface Props {
+  title?: string;
+  label?: string;
+  mediaType?: 'image' | 'video';
+  mediaSrc?: string;
+  mediaAlt?: string;
+  mediaPosition?: 'left' | 'right';
+  variant?: 'default' | 'dark' | 'gradient';
+  ctas?: Array<{ label: string; href: string; variant?: 'primary' | 'secondary' }>;
+  fullWidth?: boolean;
+  id?: string;
+}
+
+const {
+  title,
+  label,
+  mediaType = 'image',
+  mediaSrc,
+  mediaAlt = '',
+  mediaPosition = 'right',
+  variant = 'default',
+  ctas = [],
+  fullWidth = false,
+  id,
+} = Astro.props;
+
+const hasMedia = !!mediaSrc;
+---
+
+<section
+  class:list={['content-section', `content-section--${variant}`, { 'content-section--full': fullWidth }]}
+  id={id}
+  data-aos="fade-up"
+>
+  <div class:list={['content-section__inner', 'container', { 'content-section__inner--split': hasMedia, [`content-section__inner--media-${mediaPosition}`]: hasMedia }]}>
+    {hasMedia && (
+      <div class="content-section__media" data-aos={mediaPosition === 'left' ? 'fade-right' : 'fade-left'} data-aos-delay="200">
+        {mediaType === 'image' ? (
+          <img src={mediaSrc} alt={mediaAlt} loading="lazy" width="600" height="450" />
+        ) : (
+          <video autoplay muted loop playsinline>
+            <source src={mediaSrc} type="video/mp4" />
+          </video>
+        )}
+      </div>
+    )}
+
+    <div class="content-section__body">
+      {label && <span class="section-label">{label}</span>}
+      {title && <h2 class="content-section__title">{title}</h2>}
+      <div class="content-section__text">
+        <slot />
+      </div>
+      {ctas.length > 0 && (
+        <div class="cta-group" style="margin-top: 2rem;">
+          {ctas.map(cta => (
+            <a href={cta.href} class={`btn btn--${cta.variant || 'primary'}`}>
+              {cta.label}
+              {cta.variant === 'secondary' && <span class="btn__arrow">&rarr;</span>}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .content-section {
+    padding: var(--section-padding);
+  }
+
+  .content-section--dark {
+    background: var(--bg-light);
+  }
+
+  .content-section--gradient {
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 50%, var(--bg) 100%);
+  }
+
+  .content-section__inner {
+    padding: 0;
+  }
+
+  .content-section__inner--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .content-section__inner--media-left .content-section__media {
+    order: -1;
+  }
+
+  .content-section__media img,
+  .content-section__media video {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+  }
+
+  .content-section__title {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-section__text :global(p) {
+    color: var(--white-70);
+    line-height: 1.7;
+  }
+
+  .content-section__text :global(p + p) {
+    margin-top: 1rem;
+  }
+
+  .content-section__text :global(ul) {
+    list-style: none;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .content-section__text :global(li) {
+    color: var(--white-70);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .content-section__text :global(li::before) {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .content-section__text :global(strong) {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .content-section__text :global(blockquote) {
+    border-left: 3px solid var(--orange);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--white);
+  }
+
+  .content-section--full .content-section__inner {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .content-section--full .cta-group {
+    justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    .content-section__inner--split {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .content-section__inner--media-left .content-section__media {
+      order: 0;
+    }
+  }
+</style>

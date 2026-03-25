@@ -1,0 +1,75 @@
+---
+interface Props {
+  reviews: Array<{ text: string; author?: string }>;
+}
+
+const { reviews } = Astro.props;
+---
+
+<section class="reviews" data-aos="fade-up">
+  <div class="reviews__inner container">
+    <span class="section-label">Avis Google</span>
+    <h2>Ils ont essaye Victory Fit</h2>
+    <p style="margin-bottom: 2.5rem; color: var(--white-70);">Ce sont souvent les adherents qui en parlent le mieux.</p>
+
+    <div class="reviews__grid">
+      {reviews.map(review => (
+        <div class="review-card" data-aos="fade-up">
+          <div class="review-card__stars">
+            {Array(5).fill(null).map(() => (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ))}
+          </div>
+          <p class="review-card__text">"{review.text}"</p>
+          {review.author && <span class="review-card__author">— {review.author}</span>}
+        </div>
+      ))}
+    </div>
+
+    <div class="cta-group" style="margin-top: 2.5rem; justify-content: center;">
+      <a href="#" class="btn btn--primary">Voir tous les avis</a>
+      <a href="/contact" class="btn btn--secondary">Essai gratuit <span class="btn__arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reviews {
+    padding: var(--section-padding);
+    background: var(--bg-light);
+    text-align: center;
+  }
+
+  .reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .review-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--white-10);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .review-card__stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .review-card__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--white-70);
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .review-card__author {
+    font-size: 0.85rem;
+    color: var(--white-50);
+  }
+</style>

@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+---
+
+<BaseLayout title="Body Sculpt — Victory Fit" description="Cours de renforcement musculaire Body Sculpt chez Victory Fit a Metz : tonifiez, renforcez et sculptez votre corps.">
+
+  <HeroSection
+    title="Body Sculpt"
+    highlightWord="Sculpt"
+    subtitle="Renforcement musculaire complet pour tonifier, renforcer et sculpter votre corps.<br><strong>Accessible, progressif, efficace.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <ContentSection
+    label="Le concept"
+    title="Un entrainement complet"
+    mediaSrc="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
+    mediaAlt="Body Sculpt"
+    mediaPosition="right"
+  >
+    <p>Le Body Sculpt est un cours de renforcement musculaire qui cible l'ensemble du corps a travers des exercices varies avec halteres, kettlebells et poids du corps.</p>
+    <p>Chaque seance travaille le haut du corps, le bas du corps et le gainage pour un developpement equilibre.</p>
+    <ul>
+      <li>Tonifier et dessiner la silhouette</li>
+      <li>Renforcer les muscles en profondeur</li>
+      <li>Ameliorer la posture</li>
+      <li>Progresser a son rythme avec des charges adaptees</li>
+    </ul>
+    <p><strong>Accessible a tous les niveaux, avec des progressions adaptees.</strong></p>
+  </ContentSection>
+
+  <ContentSection
+    title="Pret a vous sculpter ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+---
+
+<BaseLayout title="Step Freestyle — Victory Fit" description="Cours de Step Freestyle chez Victory Fit a Metz : un cours dynamique et rythme base sur des enchainements choregraphies.">
+
+  <HeroSection
+    title="Step Freestyle"
+    highlightWord="Step"
+    subtitle="Un cours dynamique et rythme base sur des enchainements choregraphies autour du step.<br><strong>Cardio, coordination et plaisir.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <ContentSection
+    label="Le concept"
+    title="Bougez au rythme de la musique"
+    mediaSrc="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&q=80"
+    mediaAlt="Step Freestyle"
+    mediaPosition="right"
+  >
+    <p>Le Step Freestyle utilise une plateforme surelevee (le step) comme base pour des enchainements choregraphies sur une musique entrainante.</p>
+    <p>C'est une activite complete qui combine :</p>
+    <ul>
+      <li>Cardio — le coeur travaille en continu</li>
+      <li>Coordination — enchainer les pas et les mouvements</li>
+      <li>Rythme — suivre la musique et le tempo</li>
+      <li>Memoire — retenir et anticiper les sequences</li>
+    </ul>
+    <p>Accessible a tous avec des niveaux progressifs. <strong>Pas besoin d'etre danseur — l'important est de bouger et de s'amuser.</strong></p>
+  </ContentSection>
+
+  <ContentSection
+    title="Pret a monter sur le step ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

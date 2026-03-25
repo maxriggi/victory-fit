@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+---
+
+<BaseLayout title="Sport Doux & Relaxation — Victory Fit" description="Cours de yoga, pilates et stretching chez Victory Fit a Metz : bien-etre, recuperation et equilibre du corps.">
+
+  <HeroSection
+    title="Sport Doux & Relaxation"
+    highlightWord="Relaxation"
+    subtitle="Yoga, pilates, stretching — des seances dediees au bien-etre, a la recuperation et a l'equilibre du corps.<br><strong>Prendre soin de soi, c'est aussi du sport.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <ContentSection
+    label="Les activites"
+    title="Trois disciplines, un objectif : le bien-etre"
+    mediaSrc="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80"
+    mediaAlt="Yoga et Pilates"
+    mediaPosition="right"
+  >
+    <p><strong>Yoga</strong> — postures, respiration et meditation pour la souplesse, la force interieure et la reduction du stress.</p>
+    <p><strong>Pilates</strong> — renforcement profond du core, amelioration de la posture et de l'alignement corporel. Exercices precis et controles.</p>
+    <p><strong>Stretching</strong> — etirements guides pour ameliorer la mobilite, soulager les tensions et favoriser la recuperation musculaire.</p>
+  </ContentSection>
+
+  <ContentSection
+    label="Les benefices"
+    title="Pourquoi le sport doux ?"
+    fullWidth={true}
+    variant="dark"
+  >
+    <ul>
+      <li>Ameliorer la mobilite et la souplesse</li>
+      <li>Reduire le stress et l'anxiete</li>
+      <li>Renforcer en douceur les muscles profonds</li>
+      <li>Ameliorer la posture et l'alignement</li>
+      <li>Favoriser la recuperation apres les seances intenses</li>
+      <li>Complement ideal a tous les autres cours Victory Fit</li>
+    </ul>
+    <p><strong>Accessible a tous les niveaux, tous les ages.</strong></p>
+  </ContentSection>
+
+  <ContentSection
+    title="Pret a prendre soin de vous ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

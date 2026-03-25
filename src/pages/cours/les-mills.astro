@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import StatsBar from '../../components/StatsBar.astro';
+---
+
+<BaseLayout title="Les Mills — Victory Fit" description="Decouvrez les programmes Les Mills chez Victory Fit a Metz : BodyPump, BodyCombat, BodyAttack, BodyBalance et plus. Des cours collectifs reconnus dans le monde entier.">
+
+  <HeroSection
+    title="Les Mills"
+    highlightWord="Les Mills"
+    subtitle="Des programmes de fitness reconnus dans le monde entier, concus par des experts et rythmes par la musique.<br><strong>Disponibles chez Victory Fit a Metz.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <StatsBar
+    stats={[
+      { number: '100+', label: 'Pays' },
+      { number: '21 000+', label: 'Clubs' },
+      { number: '55 min', label: 'Par seance' },
+      { number: '4x/an', label: 'Nouveautes' },
+    ]}
+  />
+
+  <!-- INTRO -->
+  <ContentSection
+    label="Le concept"
+    title="Une methode prouvee scientifiquement"
+    mediaSrc="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80"
+    mediaAlt="Les Mills cours collectif"
+    mediaPosition="right"
+  >
+    <p>Les Mills est ne en Nouvelle-Zelande en 1968, fonde par Les Mills Sr., halterophile olympique. Aujourd'hui, c'est l'un des systemes de cours collectifs les plus pratiques au monde, present dans plus de 100 pays.</p>
+    <p>Chaque programme est concu en collaboration avec des chercheurs en sciences du sport et teste avant sa diffusion. Les choregraphies sont renouvelees <strong>tous les 3 mois</strong>, pour des cours toujours frais et motivants.</p>
+    <p>Les instructeurs sont certifies par Les Mills et formes a chaque programme. Resultat : <strong>un cours a Metz suit les memes standards qu'a Auckland, Tokyo ou New York.</strong></p>
+  </ContentSection>
+
+  <!-- BODYPUMP -->
+  <ContentSection
+    title="BodyPump"
+    label="Renforcement musculaire"
+    mediaSrc="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80"
+    mediaAlt="BodyPump"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+    ]}
+  >
+    <p>Cours de renforcement avec barre et poids legers, base sur des repetitions elevees pour fatiguer chaque groupe musculaire.</p>
+    <p>Chaque morceau cible une zone : squats, poitrine, dos, triceps, biceps, fentes, epaules, abdos.</p>
+    <ul>
+      <li>55 minutes de travail complet</li>
+      <li>~400 calories brulees par seance</li>
+      <li>Muscle tonique sans prise de volume</li>
+      <li>Amelioration de la densite osseuse</li>
+    </ul>
+    <p><strong>Tous les niveaux : chacun choisit ses charges.</strong></p>
+  </ContentSection>
+
+  <!-- BODYCOMBAT -->
+  <ContentSection
+    title="BodyCombat"
+    label="Arts martiaux & cardio"
+    mediaSrc="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80"
+    mediaAlt="BodyCombat"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+    ]}
+  >
+    <p>Entrainement cardio inspire des arts martiaux : karate, taekwondo, boxe, muay thai, capoeira. Zero contact, zero equipement, 100% energie.</p>
+    <p>Des coups de poing, des coups de pied, des kata et des esquives, le tout choregraphie sur une musique puissante.</p>
+    <ul>
+      <li>55 minutes de defoulement total</li>
+      <li>~570 calories brulees par seance</li>
+      <li>Coordination, agilite et force du core</li>
+      <li>Anti-stress par excellence</li>
+    </ul>
+  </ContentSection>
+
+  <!-- BODYATTACK -->
+  <ContentSection
+    title="BodyAttack"
+    label="Cardio haute energie"
+    mediaSrc="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&q=80"
+    mediaAlt="BodyAttack"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+    ]}
+  >
+    <p>Entrainement cardio haute intensite combinant courses, fentes, sauts et exercices d'agilite. Les phases intenses alternent avec des phases de recuperation active.</p>
+    <ul>
+      <li>55 minutes d'effort sportif</li>
+      <li>~555 calories brulees par seance</li>
+      <li>Amelioration du cardio, de la vitesse et de l'agilite</li>
+      <li>Options faible impact pour les debutants</li>
+    </ul>
+  </ContentSection>
+
+  <!-- BODYBALANCE -->
+  <ContentSection
+    title="BodyBalance"
+    label="Yoga, tai chi & pilates"
+    mediaSrc="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80"
+    mediaAlt="BodyBalance"
+    mediaPosition="right"
+  >
+    <p>Un cours inspire du yoga, du tai chi et du Pilates. Des enchainements fluides de postures et de mouvements sur une musique apaisante, avec une relaxation guidee en fin de seance.</p>
+    <ul>
+      <li>55 minutes de bien-etre</li>
+      <li>Souplesse, equilibre et force du core</li>
+      <li>Reduction du stress et pleine conscience</li>
+      <li>Complement ideal aux cours intenses</li>
+    </ul>
+    <p><strong>Accessible a tous, y compris les debutants complets et les seniors.</strong></p>
+  </ContentSection>
+
+  <!-- GRIT -->
+  <ContentSection
+    title="Les Mills GRIT"
+    label="HIIT extreme"
+    mediaSrc="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&q=80"
+    mediaAlt="GRIT HIIT"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <p>Le programme HIIT de Les Mills : 30 minutes d'effort maximal. Existe en trois variantes : Strength (barre et poids), Cardio (poids du corps) et Athletic (agilite).</p>
+    <ul>
+      <li>30 minutes seulement — court et intense</li>
+      <li>~400 calories brulees (effet afterburn inclus)</li>
+      <li>Boost du metabolisme pendant des heures apres la seance</li>
+      <li>Niveau intermediaire a avance recommande</li>
+    </ul>
+    <p><strong>Pour ceux qui veulent repousser leurs limites en un minimum de temps.</strong></p>
+  </ContentSection>
+
+  <!-- CE QUI REND LES MILLS UNIQUE -->
+  <ContentSection
+    title="Ce qui rend Les Mills unique"
+    fullWidth={true}
+  >
+    <ul>
+      <li>Programmes concus avec des chercheurs en sciences du sport</li>
+      <li>Choregraphies et musiques renouvelees tous les 3 mois</li>
+      <li>Instructeurs certifies et formes specifiquement</li>
+      <li>Standards identiques dans le monde entier</li>
+      <li>L'effet de groupe : la dynamique collective pousse au depassement</li>
+    </ul>
+  </ContentSection>
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Pret a decouvrir Les Mills chez Victory Fit ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import StatsBar from '../../components/StatsBar.astro';
+---
+
+<BaseLayout title="Electrostimulation (EMS) — Victory Fit" description="Seances d'electrostimulation musculaire (EMS) chez Victory Fit a Metz : 20 minutes pour un travail musculaire profond, en coaching prive.">
+
+  <HeroSection
+    title="Electrostimulation"
+    highlightWord="Electrostimulation"
+    subtitle="20 minutes pour un travail musculaire profond et intense.<br><strong>Technologie, efficacite et accompagnement personnalise.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1920&q=80"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <StatsBar
+    stats={[
+      { number: '20 min', label: 'Par seance' },
+      { number: '90%', label: 'Fibres activees' },
+      { number: '1-2x', label: 'Par semaine' },
+      { number: '1:1', label: 'Coaching prive' },
+    ]}
+  />
+
+  <!-- C'EST QUOI -->
+  <ContentSection
+    label="La technologie"
+    title="Comment fonctionne l'EMS ?"
+    mediaSrc="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80"
+    mediaAlt="Seance EMS"
+    mediaPosition="right"
+  >
+    <p>L'EMS (Electro-Myo-Stimulation) utilise des impulsions electriques de basse frequence pour declencher des contractions musculaires profondes, simultanement a un exercice volontaire.</p>
+    <p>Le participant porte une combinaison equipee d'electrodes positionnees sur les principaux groupes musculaires : pectoraux, dos, abdominaux, fessiers, quadriceps, ischio-jambiers, biceps et triceps.</p>
+    <p>L'EMS active jusqu'a <strong>90% des fibres musculaires simultanement</strong>, contre 40-60% lors d'un entrainement classique. C'est ce qui rend la seance si efficace en si peu de temps.</p>
+  </ContentSection>
+
+  <!-- DEROULEMENT -->
+  <ContentSection
+    label="La seance"
+    title="20 minutes, pas une de plus"
+    mediaSrc="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=800&q=80"
+    mediaAlt="Coaching EMS"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <ul>
+      <li>Mise en place de la combinaison et calibrage — 5-10 min</li>
+      <li>Entrainement actif avec stimulation — 20 min</li>
+      <li>Recuperation et drainage lymphatique — 5 min</li>
+    </ul>
+    <p>Les exercices sont volontairement simples (squats, fentes, gainage, curls) car la stimulation electrique ajoute une resistance considerable. Un coach vous accompagne du debut a la fin.</p>
+    <p><strong>Frequence recommandee : 1 a 2 seances par semaine, avec 48 a 72h de recuperation entre chaque.</strong></p>
+  </ContentSection>
+
+  <!-- BENEFICES -->
+  <ContentSection
+    label="Les benefices"
+    title="Prouve par la science"
+    fullWidth={true}
+  >
+    <ul>
+      <li>Gain de force et de masse musculaire — confirme par des meta-analyses (Kemmler et al.)</li>
+      <li>Reduction de la graisse corporelle et amelioration de la composition corporelle</li>
+      <li>Reduction des douleurs lombaires chroniques — plusieurs essais cliniques positifs</li>
+      <li>Gain de temps — un entrainement complet du corps en 20 minutes</li>
+      <li>Faible stress articulaire — pas de charges externes lourdes</li>
+      <li>Amelioration de la posture — activation equilibree des muscles anterieurs et posterieurs</li>
+      <li>Ideal en complement des cours collectifs ou en rehabilitation</li>
+    </ul>
+  </ContentSection>
+
+  <!-- POUR QUI -->
+  <ContentSection
+    label="Pour qui ?"
+    title="Un format qui s'adapte a tous"
+    mediaSrc="https://images.unsplash.com/photo-1616279969862-60af03e39f4c?w=800&q=80"
+    mediaAlt="EMS pour tous"
+    mediaPosition="right"
+    variant="dark"
+  >
+    <p>L'EMS est particulierement adapte pour :</p>
+    <ul>
+      <li>Les professionnels qui manquent de temps</li>
+      <li>Les debutants qui trouvent la salle de musculation intimidante</li>
+      <li>Les personnes avec des limitations articulaires</li>
+      <li>La rehabilitation post-blessure</li>
+      <li>Les seniors souhaitant maintenir leur masse musculaire</li>
+    </ul>
+    <p><strong>Contre-indications :</strong> pacemaker, grossesse, epilepsie, pathologies cardiaques non controlees, cancer actif. En cas de doute, un avis medical est recommande.</p>
+  </ContentSection>
+
+  <!-- TARIF -->
+  <ContentSection
+    label="Formule"
+    title="En coaching prive uniquement"
+    fullWidth={true}
+  >
+    <p>Les seances EMS sont proposees exclusivement en coaching prive, avec un accompagnement personnalise et un tarif specifique.</p>
+    <p><strong>Contactez-nous pour decouvrir les formules et reserver votre premiere seance.</strong></p>
+  </ContentSection>
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Pret a optimiser vos resultats ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>20 minutes. Un travail musculaire profond. Des resultats concrets.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

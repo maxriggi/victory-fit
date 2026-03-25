@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+---
+
+<BaseLayout title="Boxe Training — Victory Fit" description="Cours de boxe fitness chez Victory Fit a Metz : un entrainement explosif sur sacs de frappe, sans contact, accessible a tous.">
+
+  <HeroSection
+    title="Boxe Training"
+    highlightWord="Boxe"
+    subtitle="Un entrainement explosif et dynamique. Zero contact, 100% defoulement.<br><strong>Puissance, technique, cardio et plaisir.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <!-- C'EST QUOI -->
+  <ContentSection
+    label="Le concept"
+    title="De la boxe fitness, pas du combat"
+    mediaSrc="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80"
+    mediaAlt="Boxe Training sacs de frappe"
+    mediaPosition="right"
+  >
+    <p>La boxe training utilise les techniques de la boxe — coups de poing, jeux de jambes, esquives — comme support d'entrainement physique. <strong>Aucun contact, aucun sparring.</strong></p>
+    <p>On frappe des sacs, on travaille des combinaisons, on se defoule. C'est un entrainement complet du corps : la force vient des jambes, la rotation du core, et l'impact des bras.</p>
+    <p>Pas besoin d'experience en boxe. Chaque seance enseigne la technique progressivement.</p>
+  </ContentSection>
+
+  <!-- DEROULEMENT -->
+  <ContentSection
+    label="La seance"
+    title="Structure d'un cours type"
+    mediaSrc="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?w=800&q=80"
+    mediaAlt="Entrainement boxe"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <ul>
+      <li>Echauffement — corde a sauter, mobilite, cardio leger (10-15 min)</li>
+      <li>Technique & shadow boxing — jab, cross, crochet, uppercut (10 min)</li>
+      <li>Travail aux sacs — rounds de 2-3 min avec recuperation (15-20 min)</li>
+      <li>Conditionnement physique — burpees, pompes, gainage (10 min)</li>
+      <li>Retour au calme & etirements (5-10 min)</li>
+    </ul>
+    <p><strong>Duree totale : 45 a 60 minutes. Format en rounds comme en boxe.</strong></p>
+  </ContentSection>
+
+  <!-- BENEFICES -->
+  <ContentSection
+    label="Les benefices"
+    title="Bien plus qu'un defoulement"
+    fullWidth={true}
+  >
+    <ul>
+      <li>400 a 700 calories brulees par seance — l'un des formats les plus intenses</li>
+      <li>Travail complet du corps — jambes, core, epaules, bras, dos</li>
+      <li>Cardio et endurance — alternance effort intense / recuperation</li>
+      <li>Coordination et reflexes — combinaisons, rythme, jeux de jambes</li>
+      <li>Anti-stress puissant — frapper un sac est un exutoire physique concret</li>
+      <li>Confiance en soi — maitriser une technique donne un sentiment de competence</li>
+    </ul>
+  </ContentSection>
+
+  <!-- POUR QUI -->
+  <ContentSection
+    label="Pour qui ?"
+    title="Tout le monde est le bienvenu"
+    mediaSrc="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
+    mediaAlt="Groupe boxe training"
+    mediaPosition="right"
+    variant="dark"
+  >
+    <p>La boxe training est accessible a tous les niveaux. L'intensite est auto-regulee : un debutant frappe plus leger et prend plus de repos, un confirme accelere et augmente la puissance.</p>
+    <ul>
+      <li>Aucune experience de boxe requise</li>
+      <li>Aucun contact — jamais de sparring</li>
+      <li>Gants et bandes fournis par la salle</li>
+      <li>Tres populaire aupres des femmes comme des hommes</li>
+    </ul>
+    <p><strong>Si vous voulez vous defouler, bruler des calories et apprendre une discipline, ce cours est fait pour vous.</strong></p>
+  </ContentSection>
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Pret a enfiler les gants ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

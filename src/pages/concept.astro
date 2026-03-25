@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<BaseLayout title="Le Concept — Victory Fit" description="Decouvrez le concept Victory Fit : des cours collectifs en presentiel et en illimite, au coeur du centre-ville de Metz.">
+
+  <!-- HERO -->
+  <HeroSection
+    title="Chaque seance est une victoire."
+    highlightWord="victoire."
+    subtitle="Ici, on vient pour bouger, se depasser et partager l'energie du groupe.<br>Des cours collectifs en presentiel, un accompagnement motivant et une ambiance unique au coeur de Metz."
+    backgroundImage="https://images.unsplash.com/photo-1616279969862-60af03e39f4c?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <!-- COURS COLLECTIFS EN ILLIMITE -->
+  <ContentSection
+    title="Des cours collectifs en illimite"
+    mediaSrc="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=800&q=80"
+    mediaAlt="Cours collectif Victory Fit"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p>Chez Victory Fit, l'energie vient du groupe.</p>
+    <p>Les cours collectifs sont en presentiel et en illimite, pour vous permettre de venir aussi souvent que vous le souhaitez.</p>
+    <p>Musique, motivation, dynamique du groupe... tout est fait pour vous donner envie de revenir.</p>
+    <p><strong>Que vous soyez debutant ou sportif confirme, chacun trouve sa place dans la salle.</strong></p>
+  </ContentSection>
+
+  <!-- LES MILLS -->
+  <ContentSection
+    title="Les programmes Les Mills"
+    mediaSrc="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80"
+    mediaAlt="Les Mills Victory Fit"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+    ]}
+  >
+    <p>Victory Fit propose plusieurs programmes Les Mills, reconnus dans le monde entier pour leur efficacite et leur energie.</p>
+    <p>Des entrainements rythmes par la musique, structures et motivants, qui permettent de progresser seance apres seance.</p>
+    <p><strong>C'est l'un des formats de cours collectifs les plus populaires au monde.</strong></p>
+  </ContentSection>
+
+  <!-- BUNGEE FITNESS -->
+  <ContentSection
+    title="Le Bungee Fitness"
+    mediaSrc="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80"
+    mediaAlt="Bungee Fitness Victory Fit"
+    mediaPosition="right"
+  >
+    <p>Le Bungee Fitness apporte une dimension totalement differente a l'entrainement.</p>
+    <p>Attache a un harnais elastique, vous pouvez sauter, voler et realiser des mouvements dynamiques tout en protegeant vos articulations.</p>
+    <p><strong>Un cours a la fois fun, intense et accessible.</strong></p>
+  </ContentSection>
+
+  <!-- ACCOMPAGNEMENT -->
+  <ContentSection
+    title="Un accompagnement qui fait la difference"
+    mediaSrc="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
+    mediaAlt="Nasr aide un participant"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Essai gratuit', href: '/contact', variant: 'primary' },
+    ]}
+  >
+    <p>Chez Victory Fit, vous n'etes jamais seul face a votre entrainement.</p>
+    <p>Chaque seance est encadree et motivee pour vous aider a progresser a votre rythme.</p>
+    <p>L'objectif est simple : <strong>vous permettre de donner le meilleur de vous-meme, dans une ambiance positive et motivante.</strong></p>
+  </ContentSection>
+
+  <!-- EMS -->
+  <ContentSection
+    title="L'electrostimulation"
+    mediaSrc="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=800&q=80"
+    mediaAlt="Electrostimulation Victory Fit"
+    mediaPosition="right"
+  >
+    <p>Victory Fit propose egalement des seances d'electrostimulation musculaire.</p>
+    <p>Cette technologie permet de solliciter les muscles de maniere tres intense en un temps reduit.</p>
+    <p><strong>Ideal pour renforcer, tonifier et optimiser ses seances.</strong></p>
+  </ContentSection>
+
+  <!-- COACHING PRIVE -->
+  <ContentSection
+    title="Le coaching prive"
+    mediaSrc="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80"
+    mediaAlt="Coaching prive Victory Fit"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <p>Pour ceux qui souhaitent un suivi personnalise, Victory Fit propose egalement des seances de coaching prive.</p>
+    <p><strong>Objectifs sportifs, remise en forme, progression specifique : le programme est adapte a vos besoins.</strong></p>
+  </ContentSection>
+
+  <!-- L'ESPRIT VICTORY FIT -->
+  <ContentSection
+    title="L'esprit Victory Fit"
+    mediaSrc="https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?w=800&q=80"
+    mediaAlt="Ambiance Victory Fit"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p>Victory Fit, c'est aussi une ambiance.</p>
+    <p>Une salle ou l'on vient s'entrainer serieusement... sans se prendre au serieux.</p>
+    <p>Ici, chacun vient avec son niveau. Debutant. Sportif regulier. Ou simplement avec l'envie de bouger.</p>
+    <p>L'important est de progresser, de partager l'energie du groupe et de repartir avec cette sensation unique : <strong>la fierte d'avoir donne le meilleur de soi-meme.</strong></p>
+  </ContentSection>
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="La premiere victoire commence par une decision."
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p></p>
+  </ContentSection>
+
+</BaseLayout>

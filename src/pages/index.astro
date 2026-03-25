@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentSection from '../components/ContentSection.astro';
+import StatsBar from '../components/StatsBar.astro';
+import ReviewCard from '../components/ReviewCard.astro';
+---
+
+<BaseLayout title="Victory Fit — Sportivement Metz.">
+
+  <!-- HERO -->
+  <HeroSection
+    title="Depassez vos limites."
+    highlightWord="limites."
+    subtitle="La salle de sport du centre-ville de Metz dediee aux cours collectifs en presentiel.<br><strong>Sportivement Metz.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=1920&q=80"
+    showLogo={true}
+    ctas={[
+      { label: 'Decouvrir', href: '/concept', variant: 'primary' },
+      { label: 'Nous rejoindre', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <!-- STATS -->
+  <StatsBar
+    stats={[
+      { number: '500+', label: 'Membres' },
+      { number: '30+', label: 'Cours' },
+      { number: '7j/7', label: 'Acces' },
+      { number: '100%', label: 'Coaches certifies' },
+    ]}
+  />
+
+  <!-- L'ENERGIE DU COLLECTIF -->
+  <ContentSection
+    label="Le concept"
+    title="L'energie du collectif"
+    mediaSrc="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=80"
+    mediaAlt="Cours collectif Victory Fit"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Decouvrir le concept', href: '/concept', variant: 'primary' },
+    ]}
+  >
+    <p>Victory Fit est la seule salle du centre-ville de Metz specialisee dans les cours collectifs en presentiel.</p>
+    <p>Ici, la motivation vient du groupe, de la musique et de l'energie partagee. On transpire. On se depasse. Et surtout, on progresse ensemble.</p>
+    <p><strong>Chaque seance est une victoire.</strong></p>
+  </ContentSection>
+
+  <!-- NASR -->
+  <ContentSection
+    label="Le coach"
+    title="Nasr"
+    mediaSrc="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=800&q=80"
+    mediaAlt="Nasr, coach Victory Fit"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Decouvrir le coach', href: '/coach', variant: 'primary' },
+    ]}
+  >
+    <p>Plus de 16 ans d'experience dans le sport, entre la Tunisie, le Qatar et la France.</p>
+    <p>Mais surtout une energie contagieuse.</p>
+    <p>Dans ses cours, il y a une phrase qui revient souvent :</p>
+    <blockquote>"TU PEUX."</blockquote>
+    <p>Et etonnamment... ca marche.</p>
+  </ContentSection>
+
+  <!-- COURS DYNAMIQUES -->
+  <ContentSection
+    label="Les cours"
+    title="Des cours dynamiques et varies"
+    mediaSrc="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80"
+    mediaAlt="Cours varies Victory Fit"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Voir les cours', href: '/cours', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p>Victory Fit propose plusieurs types d'entrainement :</p>
+    <ul>
+      <li>Les Mills</li>
+      <li>Bungee Fitness</li>
+      <li>Renforcement</li>
+      <li>Cardio</li>
+      <li>Coaching personnalise</li>
+      <li>EMS</li>
+    </ul>
+    <p>Des cours concus pour progresser, se depasser et prendre plaisir a bouger. <strong>Tous les niveaux sont les bienvenus.</strong></p>
+  </ContentSection>
+
+  <!-- PLANNING -->
+  <ContentSection
+    label="Planning"
+    title="Un planning simple et flexible"
+    mediaSrc="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80"
+    mediaAlt="Cours plein Victory Fit"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Nous rejoindre', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p>Plusieurs creneaux chaque jour pour s'entrainer quand vous voulez.</p>
+    <p>Matin, midi ou soir, chacun peut trouver sa seance.</p>
+    <p><strong>3 creneaux par jour pour bouger au coeur de Metz.</strong></p>
+  </ContentSection>
+
+  <!-- ABONNEMENT -->
+  <ContentSection
+    label="Tarifs"
+    title="Des cours collectifs en illimite"
+    mediaSrc="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
+    mediaAlt="Ambiance Victory Fit"
+    mediaPosition="right"
+    ctas={[
+      { label: 'Decouvrir les tarifs', href: '/tarifs', variant: 'primary' },
+    ]}
+  >
+    <p>Avec l'abonnement Victory Fit, vous pouvez participer aux cours collectifs autant de fois que vous le souhaitez.</p>
+    <p>Plus vous venez, plus vous progressez.</p>
+    <p><strong>Le plus dur est souvent de s'arreter.</strong></p>
+  </ContentSection>
+
+  <!-- LOCALISATION -->
+  <ContentSection
+    label="Localisation"
+    title="Au coeur du centre-ville de Metz"
+    mediaSrc="https://images.unsplash.com/photo-1596357395217-80de13130e92?w=800&q=80"
+    mediaAlt="Centre-ville de Metz"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+    ]}
+  >
+    <p>Victory Fit est situe en plein centre-ville de Metz, facilement accessible.</p>
+    <p><strong>Parking Saint-Jacques juste sous la salle.</strong></p>
+    <p>Ideal pour venir s'entrainer avant le travail, entre midi et deux ou apres la journee.</p>
+  </ContentSection>
+
+  <!-- AVIS GOOGLE -->
+  <ReviewCard
+    reviews={[
+      { text: 'Une ambiance incroyable et un coach qui motive vraiment.', author: 'Adherent Google' },
+      { text: 'Les cours sont dynamiques et on se sent tout de suite a l\'aise.', author: 'Adherent Google' },
+      { text: 'Enfin une salle de cours collectifs en centre-ville de Metz !', author: 'Adherent Google' },
+    ]}
+  />
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Pret a vivre l'experience Victory Fit ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence simplement par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

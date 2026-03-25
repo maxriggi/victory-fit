@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<BaseLayout title="Coaching Personnalise — Victory Fit" description="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement. Coaching en presentiel chez Victory Fit a Metz.">
+
+  <!-- HERO -->
+  <HeroSection
+    title="Coaching personnalise"
+    highlightWord="personnalise"
+    subtitle="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement.<br>Coaching en presentiel, directement dans la salle Victory Fit."
+    backgroundImage="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  />
+
+  <!-- POUR QUI -->
+  <ContentSection
+    label="Pour qui ?"
+    title="Un coaching adapte a vous"
+    mediaSrc="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=800&q=80"
+    mediaAlt="Seance individuelle"
+    mediaPosition="right"
+  >
+    <p>Le coaching personnalise s'adresse a toutes les personnes qui veulent des resultats concrets.</p>
+    <p>Que vous soyez :</p>
+    <ul>
+      <li>Debutant</li>
+      <li>En reprise sportive</li>
+      <li>Sportif confirme</li>
+      <li>Ou avec un objectif precis</li>
+    </ul>
+    <p><strong>Ce suivi est fait pour vous.</strong></p>
+  </ContentSection>
+
+  <!-- OBJECTIFS -->
+  <ContentSection
+    label="Vos objectifs"
+    title="Des objectifs clairs"
+    mediaSrc="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=800&q=80"
+    mediaAlt="Transformation et effort"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <p>Chaque programme est construit selon vos besoins :</p>
+    <ul>
+      <li>Remise en forme</li>
+      <li>Perte de poids ou prise de masse</li>
+      <li>Bien-etre physique et mental</li>
+      <li>Preparation physique</li>
+      <li>Initiation a la boxe</li>
+      <li>Ou tout autre objectif specifique</li>
+    </ul>
+    <p><strong>Chaque accompagnement est entierement personnalise pour s'adapter a votre profil et a vos attentes.</strong></p>
+  </ContentSection>
+
+  <!-- RESULTATS -->
+  <ContentSection
+    label="Resultats"
+    title="Des resultats visibles"
+    mediaSrc="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=80"
+    mediaAlt="Resultats coaching"
+    mediaPosition="right"
+  >
+    <p>Avec un suivi personnalise, les resultats sont reels et mesurables.</p>
+    <p>Transformation physique, amelioration des performances, bien-etre...</p>
+    <p><strong>Les progres se voient et se ressentent.</strong></p>
+  </ContentSection>
+
+  <!-- BENEFICES -->
+  <ContentSection
+    label="Les benefices"
+    title="Un accompagnement qui fait la difference"
+    fullWidth={true}
+    variant="dark"
+  >
+    <ul>
+      <li>Programme 100% personnalise</li>
+      <li>Suivi individuel et progression plus rapide</li>
+      <li>Motivation constante</li>
+      <li>Seances efficaces et optimisees</li>
+      <li>Resultats concrets et durables</li>
+    </ul>
+    <p><strong>Vous etes accompagne du debut a la fin.</strong></p>
+  </ContentSection>
+
+  <!-- COMMENT CA SE PASSE -->
+  <ContentSection
+    label="Le processus"
+    title="Un suivi structure"
+    mediaSrc="https://images.unsplash.com/photo-1596357395217-80de13130e92?w=800&q=80"
+    mediaAlt="Seance reelle"
+    mediaPosition="left"
+  >
+    <p>Le coaching se deroule en etapes claires :</p>
+    <ul>
+      <li>Echange et definition des objectifs</li>
+      <li>Mise en place d'un programme personnalise</li>
+      <li>Seances encadrees en salle</li>
+      <li>Suivi et ajustements</li>
+      <li>Progression et resultats</li>
+    </ul>
+    <p><strong>Un accompagnement simple, clair et efficace.</strong></p>
+  </ContentSection>
+
+  <!-- L'EQUIPE -->
+  <ContentSection
+    label="L'equipe"
+    title="Nasr & son equipe"
+    mediaSrc="https://images.unsplash.com/photo-1595078475328-1ab05d0a6a0e?w=800&q=80"
+    mediaAlt="Nasr et son equipe"
+    mediaPosition="right"
+    variant="dark"
+  >
+    <p>16 ans d'experience dans le sport et le fitness. Createur et gerant de Victory Fit.</p>
+    <p>Le coaching est assure par Nasr ainsi que par des coachs independants selectionnes avec soin.</p>
+    <p><strong>Tous partagent la meme exigence : qualite, accompagnement et resultats.</strong></p>
+  </ContentSection>
+
+  <!-- EMS -->
+  <ContentSection
+    label="Option premium"
+    title="Coaching + EMS"
+    mediaSrc="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&q=80"
+    mediaAlt="EMS"
+    mediaPosition="left"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p>Possibilite d'integrer des seances d'electrostimulation (EMS) dans votre programme.</p>
+    <p><strong>Un travail musculaire intensif en un temps reduit.</strong></p>
+    <p>Disponible uniquement en coaching prive, avec un accompagnement personnalise.</p>
+  </ContentSection>
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Pret a passer au niveau superieur ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>Le coaching personnalise est le moyen le plus rapide d'atteindre vos objectifs.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

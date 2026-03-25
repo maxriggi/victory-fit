@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<BaseLayout title="Planning — Victory Fit" description="Consultez le planning des cours collectifs Victory Fit a Metz.">
+
+  <HeroSection
+    title="Planning des cours"
+    highlightWord="cours"
+    subtitle="Plusieurs creneaux chaque jour pour s'entrainer quand vous voulez.<br>Matin, midi ou soir, chacun peut trouver sa seance."
+    backgroundImage="https://images.unsplash.com/photo-1596357395217-80de13130e92?w=1920&q=80"
+    ctas={[
+      { label: 'Essai gratuit', href: '/contact', variant: 'primary' },
+    ]}
+  />
+
+  <ContentSection
+    title="Planning a venir"
+    fullWidth={true}
+  >
+    <p>Le planning detaille des cours sera bientot disponible.</p>
+    <p><strong>Contactez-nous pour connaitre les horaires et reserver votre premier cours d'essai gratuit.</strong></p>
+  </ContentSection>
+
+  <ContentSection
+    title="Pret a commencer ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Voir les cours', href: '/cours', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

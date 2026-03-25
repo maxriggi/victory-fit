@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import ContentSection from '../components/ContentSection.astro';
+---
+
+<BaseLayout title="Tarifs — Victory Fit" description="Decouvrez les tarifs Victory Fit : cours collectifs en illimite au coeur de Metz.">
+
+  <HeroSection
+    title="Nos tarifs"
+    highlightWord="tarifs"
+    subtitle="Des cours collectifs en presentiel et en illimite.<br>Plus vous venez, plus vous progressez."
+    backgroundImage="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=1920&q=80"
+    ctas={[
+      { label: 'Essai gratuit', href: '/contact', variant: 'primary' },
+    ]}
+  />
+
+  <ContentSection
+    title="Tarifs a venir"
+    fullWidth={true}
+  >
+    <p>La grille tarifaire detaillee sera bientot disponible.</p>
+    <p><strong>Contactez-nous pour decouvrir nos offres et beneficier d'un cours d'essai gratuit.</strong></p>
+  </ContentSection>
+
+  <ContentSection
+    title="Pret a nous rejoindre ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Voir les cours', href: '/cours', variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La premiere victoire commence par une decision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

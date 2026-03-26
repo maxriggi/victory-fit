@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Contact — Victory Fit" description="Contactez Victory Fit, votre salle de sport au centre-ville de Metz. Reservez votre cours d'essai gratuit.">
@@ -70,8 +71,8 @@ import ContentSection from '../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Voir les cours', href: '/cours', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Voir les cours', href: `${base}cours`, variant: 'secondary' },
     ]}
   >
     <p></p>

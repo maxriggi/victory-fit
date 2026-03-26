@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Les Cours — Victory Fit" description="Decouvrez tous les cours Victory Fit : Les Mills, Bungee Fitness, Boxe, Cardio, Body Sculpt, EMS, Step, Yoga et plus.">
@@ -13,8 +14,8 @@ import ContentSection from '../../components/ContentSection.astro';
     subtitle="Des entrainements varies, dynamiques et accessibles a tous.<br>Des cours collectifs en presentiel et en illimite, au coeur du centre-ville de Metz."
     backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -25,7 +26,7 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaAlt="Cours collectifs Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
     ]}
   >
     <p>Chez Victory Fit, les cours collectifs sont au coeur de l'experience.</p>
@@ -42,8 +43,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/les-mills', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/les-mills`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit propose plusieurs programmes Les Mills, reconnus dans le monde entier pour leur efficacite et leur energie.</p>
@@ -63,7 +64,7 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaAlt="Bungee Fitness"
     mediaPosition="right"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/bungee-fitness', variant: 'primary' },
+      { label: 'En savoir plus', href: `${base}cours/bungee-fitness`, variant: 'primary' },
     ]}
   >
     <p>Le Bungee Fitness apporte une dimension totalement differente a l'entrainement.</p>
@@ -86,8 +87,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/boxe-training', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/boxe-training`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Un entrainement explosif et dynamique base sur :</p>
@@ -108,8 +109,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaAlt="Cardio Training"
     mediaPosition="right"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/cardio-training', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/cardio-training`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Des seances dynamiques orientees endurance et depense calorique, basees sur le HIIT (High Intensity Interval Training).</p>
@@ -131,8 +132,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/body-sculpt', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/body-sculpt`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Un entrainement complet axe sur le renforcement musculaire.</p>
@@ -153,8 +154,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaAlt="EMS"
     mediaPosition="right"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/ems', variant: 'primary' },
-      { label: 'Nous contacter', href: '/contact', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/ems`, variant: 'primary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Une technologie innovante permettant de solliciter les muscles en profondeur grace a des impulsions electriques.</p>
@@ -177,8 +178,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'En savoir plus', href: '/coaching', variant: 'primary' },
-      { label: 'Nous contacter', href: '/contact', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}coaching`, variant: 'primary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Un accompagnement sur mesure, adapte a vos objectifs et a votre niveau.</p>
@@ -193,8 +194,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaAlt="Step Freestyle"
     mediaPosition="right"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/step-freestyle', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/step-freestyle`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Un cours dynamique et rythme base sur des enchainements choregraphies autour du step.</p>
@@ -217,8 +218,8 @@ import ContentSection from '../../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'En savoir plus', href: '/cours/sport-doux', variant: 'primary' },
-      { label: 'Voir le planning', href: '/planning', variant: 'secondary' },
+      { label: 'En savoir plus', href: `${base}cours/sport-doux`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p>Des seances dediees au bien-etre, a la recuperation et a l'equilibre du corps.</p>
@@ -248,8 +249,8 @@ import ContentSection from '../../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

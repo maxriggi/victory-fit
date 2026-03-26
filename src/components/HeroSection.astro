@@ -8,6 +8,8 @@ interface Props {
   showLogo?: boolean;
 }
 
+const base = import.meta.env.BASE_URL;
+
 const {
   title,
   highlightWord,
@@ -48,7 +50,7 @@ function renderTitle(title: string, highlightWord?: string) {
 
     {showLogo && (
       <div class="hero__visual">
-        <img src="/assets/logo-version-a-full.png" alt="Victory Fit" width="497" height="438" />
+        <img src={`${base}assets/logo-version-a-full.png`} alt="Victory Fit" width="497" height="438" />
       </div>
     )}
   </div>

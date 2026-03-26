@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
 import StatsBar from '../components/StatsBar.astro';
 import ReviewCard from '../components/ReviewCard.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Victory Fit — Sportivement Metz.">
@@ -16,8 +17,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     backgroundImage="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=1920&q=80"
     showLogo={true}
     ctas={[
-      { label: 'Decouvrir', href: '/concept', variant: 'primary' },
-      { label: 'Nous rejoindre', href: '/contact', variant: 'secondary' },
+      { label: 'Decouvrir', href: `${base}concept`, variant: 'primary' },
+      { label: 'Nous rejoindre', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -39,7 +40,7 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaAlt="Cours collectif Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Decouvrir le concept', href: '/concept', variant: 'primary' },
+      { label: 'Decouvrir le concept', href: `${base}concept`, variant: 'primary' },
     ]}
   >
     <p>Victory Fit est la seule salle du centre-ville de Metz specialisee dans les cours collectifs en presentiel.</p>
@@ -56,7 +57,7 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Decouvrir le coach', href: '/coach', variant: 'primary' },
+      { label: 'Decouvrir le coach', href: `${base}coach`, variant: 'primary' },
     ]}
   >
     <p>Plus de 16 ans d'experience dans le sport, entre la Tunisie, le Qatar et la France.</p>
@@ -74,8 +75,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaAlt="Cours varies Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Voir les cours', href: '/cours', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir les cours', href: `${base}cours`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit propose plusieurs types d'entrainement :</p>
@@ -99,8 +100,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Nous rejoindre', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Nous rejoindre', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Plusieurs creneaux chaque jour pour s'entrainer quand vous voulez.</p>
@@ -116,7 +117,7 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaAlt="Ambiance Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Decouvrir les tarifs', href: '/tarifs', variant: 'primary' },
+      { label: 'Decouvrir les tarifs', href: `${base}tarifs`, variant: 'primary' },
     ]}
   >
     <p>Avec l'abonnement Victory Fit, vous pouvez participer aux cours collectifs autant de fois que vous le souhaitez.</p>
@@ -133,7 +134,7 @@ import ReviewCard from '../components/ReviewCard.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
     ]}
   >
     <p>Victory Fit est situe en plein centre-ville de Metz, facilement accessible.</p>
@@ -156,8 +157,8 @@ import ReviewCard from '../components/ReviewCard.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence simplement par une decision.</strong></p>

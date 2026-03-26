@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Step Freestyle — Victory Fit" description="Cours de Step Freestyle chez Victory Fit a Metz : un cours dynamique et rythme base sur des enchainements choregraphies.">
@@ -12,8 +13,8 @@ import ContentSection from '../../components/ContentSection.astro';
     subtitle="Un cours dynamique et rythme base sur des enchainements choregraphies autour du step.<br><strong>Cardio, coordination et plaisir.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -40,8 +41,8 @@ import ContentSection from '../../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

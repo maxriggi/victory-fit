@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Le Coach — Victory Fit" description="Decouvrez Nasr, fondateur et coach de Victory Fit. 16 ans d'experience, une energie contagieuse et une passion pour le sport.">
@@ -13,8 +14,8 @@ import ContentSection from '../components/ContentSection.astro';
     subtitle="Coach sportif. Energie. Experience. Resultats.<br>Ici, on ne suit pas juste un programme. On s'entraine avec quelqu'un qui vit le sport."
     backgroundImage="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -136,8 +137,8 @@ import ContentSection from '../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Coaching personnalise', href: '/coaching', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Coaching personnalise', href: `${base}coaching`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>En plus des cours collectifs, Nasr propose un accompagnement individuel entierement personnalise.</p>
@@ -158,8 +159,8 @@ import ContentSection from '../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

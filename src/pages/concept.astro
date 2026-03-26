@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Le Concept — Victory Fit" description="Decouvrez le concept Victory Fit : des cours collectifs en presentiel et en illimite, au coeur du centre-ville de Metz.">
@@ -13,8 +14,8 @@ import ContentSection from '../components/ContentSection.astro';
     subtitle="Ici, on vient pour bouger, se depasser et partager l'energie du groupe.<br>Des cours collectifs en presentiel, un accompagnement motivant et une ambiance unique au coeur de Metz."
     backgroundImage="https://images.unsplash.com/photo-1616279969862-60af03e39f4c?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -25,8 +26,8 @@ import ContentSection from '../components/ContentSection.astro';
     mediaAlt="Cours collectif Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Chez Victory Fit, l'energie vient du groupe.</p>
@@ -43,7 +44,7 @@ import ContentSection from '../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
     ]}
   >
     <p>Victory Fit propose plusieurs programmes Les Mills, reconnus dans le monde entier pour leur efficacite et leur energie.</p>
@@ -71,7 +72,7 @@ import ContentSection from '../components/ContentSection.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Essai gratuit', href: '/contact', variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'primary' },
     ]}
   >
     <p>Chez Victory Fit, vous n'etes jamais seul face a votre entrainement.</p>
@@ -110,8 +111,8 @@ import ContentSection from '../components/ContentSection.astro';
     mediaAlt="Ambiance Victory Fit"
     mediaPosition="right"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit, c'est aussi une ambiance.</p>
@@ -126,8 +127,8 @@ import ContentSection from '../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p></p>

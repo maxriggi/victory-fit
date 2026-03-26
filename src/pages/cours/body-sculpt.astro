@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Body Sculpt — Victory Fit" description="Cours de renforcement musculaire Body Sculpt chez Victory Fit a Metz : tonifiez, renforcez et sculptez votre corps.">
@@ -12,8 +13,8 @@ import ContentSection from '../../components/ContentSection.astro';
     subtitle="Renforcement musculaire complet pour tonifier, renforcer et sculpter votre corps.<br><strong>Accessible, progressif, efficace.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -40,8 +41,8 @@ import ContentSection from '../../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

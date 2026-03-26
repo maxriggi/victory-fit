@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Bungee Fitness — Victory Fit" description="Decouvrez le Bungee Fitness chez Victory Fit a Metz : un entrainement aerien fun, intense et accessible qui protege vos articulations.">
@@ -12,8 +13,8 @@ import ContentSection from '../../components/ContentSection.astro';
     subtitle="Sautez, volez, depassez-vous — tout en protegeant vos articulations.<br><strong>Une experience unique chez Victory Fit.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -127,8 +128,8 @@ import ContentSection from '../../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

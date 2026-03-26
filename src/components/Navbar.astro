@@ -1,18 +1,19 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { label: 'Concept', href: '/concept' },
-  { label: 'Le Coach', href: '/coach' },
-  { label: 'Les Cours', href: '/cours' },
-  { label: 'Coaching', href: '/coaching' },
-  { label: 'Planning', href: '/planning' },
-  { label: 'Tarifs', href: '/tarifs' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Concept', href: `${base}concept` },
+  { label: 'Le Coach', href: `${base}coach` },
+  { label: 'Les Cours', href: `${base}cours` },
+  { label: 'Coaching', href: `${base}coaching` },
+  { label: 'Planning', href: `${base}planning` },
+  { label: 'Tarifs', href: `${base}tarifs` },
+  { label: 'Contact', href: `${base}contact` },
 ];
 ---
 
 <nav class="navbar">
-  <a href="/" class="navbar__logo">
-    <img src="/assets/logo-version-b-icon.png" alt="Victory Fit" width="44" height="39" />
+  <a href={base} class="navbar__logo">
+    <img src={`${base}assets/logo-version-b-icon.png`} alt="Victory Fit" width="44" height="39" />
   </a>
 
   <ul class="navbar__links">
@@ -21,7 +22,7 @@ const navLinks = [
     ))}
   </ul>
 
-  <a href="/contact" class="navbar__cta">Essai gratuit</a>
+  <a href={`${base}contact`} class="navbar__cta">Essai gratuit</a>
 
   <button class="navbar__toggle" aria-label="Menu" aria-expanded="false">
     <span></span>
@@ -36,7 +37,7 @@ const navLinks = [
     {navLinks.map(link => (
       <li><a href={link.href}>{link.label}</a></li>
     ))}
-    <li><a href="/contact" class="mobile-menu__cta">Essai gratuit</a></li>
+    <li><a href={`${base}contact`} class="mobile-menu__cta">Essai gratuit</a></li>
   </ul>
 </div>
 

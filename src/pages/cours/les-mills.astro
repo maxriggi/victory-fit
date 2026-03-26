@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
 import StatsBar from '../../components/StatsBar.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Les Mills — Victory Fit" description="Decouvrez les programmes Les Mills chez Victory Fit a Metz : BodyPump, BodyCombat, BodyAttack, BodyBalance et plus. Des cours collectifs reconnus dans le monde entier.">
@@ -13,8 +14,8 @@ import StatsBar from '../../components/StatsBar.astro';
     subtitle="Des programmes de fitness reconnus dans le monde entier, concus par des experts et rythmes par la musique.<br><strong>Disponibles chez Victory Fit a Metz.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -49,7 +50,7 @@ import StatsBar from '../../components/StatsBar.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
     ]}
   >
     <p>Cours de renforcement avec barre et poids legers, base sur des repetitions elevees pour fatiguer chaque groupe musculaire.</p>
@@ -71,7 +72,7 @@ import StatsBar from '../../components/StatsBar.astro';
     mediaAlt="BodyCombat"
     mediaPosition="right"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
     ]}
   >
     <p>Entrainement cardio inspire des arts martiaux : karate, taekwondo, boxe, muay thai, capoeira. Zero contact, zero equipement, 100% energie.</p>
@@ -93,7 +94,7 @@ import StatsBar from '../../components/StatsBar.astro';
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
     ]}
   >
     <p>Entrainement cardio haute intensite combinant courses, fentes, sauts et exercices d'agilite. Les phases intenses alternent avec des phases de recuperation active.</p>
@@ -162,8 +163,8 @@ import StatsBar from '../../components/StatsBar.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

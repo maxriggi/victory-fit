@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Sport Doux & Relaxation — Victory Fit" description="Cours de yoga, pilates et stretching chez Victory Fit a Metz : bien-etre, recuperation et equilibre du corps.">
@@ -12,8 +13,8 @@ import ContentSection from '../../components/ContentSection.astro';
     subtitle="Yoga, pilates, stretching — des seances dediees au bien-etre, a la recuperation et a l'equilibre du corps.<br><strong>Prendre soin de soi, c'est aussi du sport.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=1920&q=80"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -51,8 +52,8 @@ import ContentSection from '../../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: '/planning', variant: 'primary' },
-      { label: 'Essai gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La premiere victoire commence par une decision.</strong></p>

@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Coaching Personnalise — Victory Fit" description="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement. Coaching en presentiel chez Victory Fit a Metz.">
@@ -13,8 +14,8 @@ import ContentSection from '../components/ContentSection.astro';
     subtitle="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement.<br>Coaching en presentiel, directement dans la salle Victory Fit."
     backgroundImage="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -129,8 +130,8 @@ import ContentSection from '../components/ContentSection.astro';
     mediaAlt="EMS"
     mediaPosition="left"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Possibilite d'integrer des seances d'electrostimulation (EMS) dans votre programme.</p>
@@ -144,8 +145,8 @@ import ContentSection from '../components/ContentSection.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>Le coaching personnalise est le moyen le plus rapide d'atteindre vos objectifs.</strong></p>

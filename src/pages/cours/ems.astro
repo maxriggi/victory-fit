@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
 import StatsBar from '../../components/StatsBar.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Electrostimulation (EMS) — Victory Fit" description="Seances d'electrostimulation musculaire (EMS) chez Victory Fit a Metz : 20 minutes pour un travail musculaire profond, en coaching prive.">
@@ -13,8 +14,8 @@ import StatsBar from '../../components/StatsBar.astro';
     subtitle="20 minutes pour un travail musculaire profond et intense.<br><strong>Technologie, efficacite et accompagnement personnalise.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1920&q=80"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -111,8 +112,8 @@ import StatsBar from '../../components/StatsBar.astro';
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Nous contacter', href: '/contact', variant: 'primary' },
-      { label: 'Bilan gratuit', href: '/contact', variant: 'secondary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>20 minutes. Un travail musculaire profond. Des resultats concrets.</strong></p>

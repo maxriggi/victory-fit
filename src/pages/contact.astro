@@ -5,7 +5,7 @@ import ContentSection from '../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Contact — Victory Fit" description="Contactez Victory Fit, votre salle de sport au centre-ville de Metz. Réservez votre cours d'essai gratuit.">
+<BaseLayout title="Contact — Victory Fit" description="Contactez Victory Fit, votre salle de sport au centre-ville de Metz. Réservez votre cours d'essai gratuit." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Contact' }]}>
 
   <HeroSection
     title="Contactez-nous"

@@ -5,7 +5,7 @@ import ContentSection from '../../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Les Cours — Victory Fit" description="Découvrez tous les cours Victory Fit : Les Mills, Bungee Fitness, Boxe, Cardio, Body Sculpt, EMS, Step, Yoga et plus.">
+<BaseLayout title="Les Cours — Victory Fit" description="Découvrez tous les cours Victory Fit : Les Mills, Bungee Fitness, Boxe, Cardio, Body Sculpt, EMS, Step, Yoga et plus." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours' }]}>
 
   <!-- HERO -->
   <HeroSection

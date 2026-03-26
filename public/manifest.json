@@ -1,0 +1,21 @@
+{
+  "name": "Victory Fit — Sportivement Metz",
+  "short_name": "Victory Fit",
+  "description": "Salle de sport au centre-ville de Metz dédiée aux cours collectifs en présentiel.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#7A1B1F",
+  "icons": [
+    {
+      "src": "/assets/logo-version-b-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo-version-a-full.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

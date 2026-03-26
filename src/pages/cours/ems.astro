@@ -3,10 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
 import StatsBar from '../../components/StatsBar.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Électrostimulation (EMS) — Victory Fit" description="Séances d'électrostimulation musculaire (EMS) chez Victory Fit à Metz : 20 minutes pour un travail musculaire profond, en coaching privé.">
+<BaseLayout title="Électrostimulation (EMS) — Victory Fit" description="Séances d'électrostimulation musculaire (EMS) chez Victory Fit à Metz : 20 minutes pour un travail musculaire profond, en coaching privé." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Électrostimulation (EMS)' }]}>
 
   <HeroSection
     title="Électrostimulation"
@@ -105,6 +106,8 @@ const base = import.meta.env.BASE_URL;
     <p>Les séances EMS sont proposées exclusivement en coaching privé, avec un accompagnement personnalisé et un tarif spécifique.</p>
     <p><strong>Contactez-nous pour découvrir les formules et réserver votre première séance.</strong></p>
   </ContentSection>
+
+  <RelatedCourses currentSlug="ems" />
 
   <!-- FINAL CTA -->
   <ContentSection

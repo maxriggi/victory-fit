@@ -5,7 +5,7 @@ import ContentSection from '../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Coaching Personnalisé — Victory Fit" description="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement. Coaching en présentiel chez Victory Fit à Metz.">
+<BaseLayout title="Coaching Personnalisé — Victory Fit" description="Un accompagnement sur mesure pour atteindre vos objectifs plus rapidement. Coaching en présentiel chez Victory Fit à Metz." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Coaching Personnalisé' }]}>
 
   <!-- HERO -->
   <HeroSection

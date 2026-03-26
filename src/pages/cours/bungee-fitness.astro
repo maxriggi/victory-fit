@@ -2,10 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Bungee Fitness — Victory Fit" description="Découvrez le Bungee Fitness chez Victory Fit à Metz : un entraînement aérien fun, intense et accessible qui protège vos articulations.">
+<BaseLayout title="Bungee Fitness — Victory Fit" description="Découvrez le Bungee Fitness chez Victory Fit à Metz : un entraînement aérien fun, intense et accessible qui protège vos articulations." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Bungee Fitness' }]}>
 
   <HeroSection
     title="Bungee Fitness"
@@ -121,6 +122,8 @@ const base = import.meta.env.BASE_URL;
     </ul>
     <p>Groupes restreints (6 a 15 personnes) pour un encadrement optimal. <strong>Durée totale : 45 a 60 minutes.</strong></p>
   </ContentSection>
+
+  <RelatedCourses currentSlug="bungee-fitness" />
 
   <!-- FINAL CTA -->
   <ContentSection

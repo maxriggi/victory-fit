@@ -2,10 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Step Freestyle — Victory Fit" description="Cours de Step Freestyle chez Victory Fit à Metz : un cours dynamique et rythme basé sur des enchaînements chorégraphiés.">
+<BaseLayout title="Step Freestyle — Victory Fit" description="Cours de Step Freestyle chez Victory Fit à Metz : un cours dynamique et rythme basé sur des enchaînements chorégraphiés." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Step Freestyle' }]}>
 
   <HeroSection
     title="Step Freestyle"
@@ -35,6 +36,8 @@ const base = import.meta.env.BASE_URL;
     </ul>
     <p>Accessible à tous avec des niveaux progressifs. <strong>Pas besoin d'être danseur — l'important est de bouger et de s'amuser.</strong></p>
   </ContentSection>
+
+  <RelatedCourses currentSlug="step-freestyle" />
 
   <ContentSection
     title="Prêt a monter sur le step ?"

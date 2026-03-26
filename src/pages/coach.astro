@@ -5,7 +5,7 @@ import ContentSection from '../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Le Coach — Victory Fit" description="Découvrez Nasr, fondateur et coach de Victory Fit. 16 ans d'expérience, une énergie contagieuse et une passion pour le sport.">
+<BaseLayout title="Le Coach — Victory Fit" description="Découvrez Nasr, fondateur et coach de Victory Fit. 16 ans d'expérience, une énergie contagieuse et une passion pour le sport." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Le Coach' }]}>
 
   <!-- HERO -->
   <HeroSection

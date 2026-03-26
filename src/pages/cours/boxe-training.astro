@@ -2,10 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Boxe Training — Victory Fit" description="Cours de boxe fitness chez Victory Fit à Metz : un entraînement explosif sur sacs de frappe, sans contact, accessible à tous.">
+<BaseLayout title="Boxe Training — Victory Fit" description="Cours de boxe fitness chez Victory Fit à Metz : un entraînement explosif sur sacs de frappe, sans contact, accessible à tous." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Boxe Training' }]}>
 
   <HeroSection
     title="Boxe Training"
@@ -84,6 +85,8 @@ const base = import.meta.env.BASE_URL;
     </ul>
     <p><strong>Si vous voulez vous défouler, brûler des calories et apprendre une discipline, ce cours est fait pour vous.</strong></p>
   </ContentSection>
+
+  <RelatedCourses currentSlug="boxe-training" />
 
   <!-- FINAL CTA -->
   <ContentSection

@@ -5,7 +5,7 @@ import ContentSection from '../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Tarifs — Victory Fit" description="Découvrez les tarifs Victory Fit : cours collectifs en illimité au cœur de Metz.">
+<BaseLayout title="Tarifs — Victory Fit" description="Découvrez les tarifs Victory Fit : cours collectifs en illimité au cœur de Metz." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Tarifs' }]}>
 
   <HeroSection
     title="Nos tarifs"

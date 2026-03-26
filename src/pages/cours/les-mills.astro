@@ -3,10 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
 import StatsBar from '../../components/StatsBar.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Les Mills — Victory Fit" description="Découvrez les programmes Les Mills chez Victory Fit à Metz : BodyPump, BodyCombat, BodyAttack, BodyBalance et plus. Des cours collectifs reconnus dans le monde entier.">
+<BaseLayout title="Les Mills — Victory Fit" description="Programmes Les Mills chez Victory Fit à Metz : BodyPump, BodyCombat, BodyAttack, BodyBalance. Cours collectifs reconnus dans le monde entier." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Les Mills' }]}>
 
   <HeroSection
     title="Les Mills"
@@ -156,6 +157,8 @@ const base = import.meta.env.BASE_URL;
       <li>L'effet de groupe : la dynamique collective pousse au dépassement</li>
     </ul>
   </ContentSection>
+
+  <RelatedCourses currentSlug="les-mills" />
 
   <!-- FINAL CTA -->
   <ContentSection

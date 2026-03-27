@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -16,7 +17,6 @@ const base = import.meta.env.BASE_URL;
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -112,23 +112,17 @@ const base = import.meta.env.BASE_URL;
   </ContentSection>
 
   <!-- SON STYLE -->
-  <ContentSection
+  <FeatureGrid
     label="Son style"
     title="Des séances qui donnent envie de revenir"
-    mediaSrc="https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=800&q=80"
-    mediaAlt="Cours intense Victory Fit"
-    mediaPosition="left"
     variant="dark"
-  >
-    <p>Des séances :</p>
-    <ul>
-      <li>Dynamiques</li>
-      <li>Intenses</li>
-      <li>Motivantes</li>
-      <li>Accessibles à tous</li>
-    </ul>
-    <p>Un mélange de discipline, d'énergie et de plaisir. <strong>Parce que le sport doit être exigeant... ET donner envie de revenir.</strong></p>
-  </ContentSection>
+    features={[
+      { icon: '⚡', title: 'Dynamiques', description: 'De l\'énergie du début à la fin.' },
+      { icon: '🔥', title: 'Intenses', description: 'Chaque séance vous pousse à vous dépasser.' },
+      { icon: '💪', title: 'Motivantes', description: 'Le groupe et le coach font la différence.' },
+      { icon: '🤝', title: 'Accessibles', description: 'Tous les niveaux sont les bienvenus.' },
+    ]}
+  />
 
   <!-- SON OBJECTIF -->
   <ContentSection
@@ -152,7 +146,6 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'Coaching personnalisé', href: `${base}coaching`, variant: 'primary' },
-      { label: 'Demander un bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>En plus des cours collectifs, Nasr propose un accompagnement individuel entièrement personnalisé.</p>
@@ -182,9 +175,8 @@ const base = import.meta.env.BASE_URL;
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p><strong>La première victoire commence par une décision.</strong></p>

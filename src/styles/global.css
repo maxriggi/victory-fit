@@ -26,10 +26,10 @@ body {
   --orange: #F29031;
   --orange-deep: #EF6C3E;
   --bg: #0A0A0A;
-  --bg-light: #111111;
+  --bg-light: #1A1A1A;
   --white: #FFFFFF;
-  --white-70: rgba(255, 255, 255, 0.78);
-  --white-50: rgba(255, 255, 255, 0.6);
+  --white-70: rgba(255, 255, 255, 0.78); /* adjusted for WCAG AA */
+  --white-50: rgba(255, 255, 255, 0.6); /* adjusted for WCAG AA */
   --white-10: rgba(255, 255, 255, 0.1);
 
   /* Gradients — endpoint #D94F4F passes AA contrast on dark bg (4.89:1) */
@@ -66,11 +66,11 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   margin-bottom: 1rem;
 }
 
@@ -78,6 +78,12 @@ p {
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   line-height: 1.7;
   color: var(--white-70);
+}
+
+.text-intro {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: var(--white);
+  font-weight: 500;
 }
 
 p + p {
@@ -199,6 +205,11 @@ strong {
   transform: translateY(-2px);
 }
 
+.btn--sm {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.25rem;
+}
+
 .btn__arrow {
   transition: transform 0.3s ease;
 }
@@ -305,6 +316,15 @@ a:focus-visible {
     transform: none !important;
     transition: none !important;
   }
+}
+
+/* ───────────────────────────── GRADIENT SEPARATOR ───────────────────────────── */
+.gradient-separator {
+  height: 2px;
+  background: var(--gradient-horizontal);
+  border: none;
+  margin: 0;
+  opacity: 0.5;
 }
 
 /* ───────────────────────────── COOKIE BANNER ───────────────────────────── */

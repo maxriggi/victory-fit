@@ -1,13 +1,20 @@
 ---
 const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
+function isActive(path: string) {
+  const cleanBase = base.replace(/\/$/, '');
+  const fullPath = cleanBase + '/' + path;
+  if (path === '') return currentPath === cleanBase + '/' || currentPath === cleanBase;
+  return currentPath.startsWith(fullPath);
+}
 const navLinks = [
-  { label: 'Concept', href: `${base}concept` },
-  { label: 'Le Coach', href: `${base}coach` },
-  { label: 'Les Cours', href: `${base}cours` },
-  { label: 'Coaching', href: `${base}coaching` },
-  { label: 'Planning', href: `${base}planning` },
-  { label: 'Tarifs', href: `${base}tarifs` },
-  { label: 'Contact', href: `${base}contact` },
+  { label: 'Concept', href: `${base}concept`, path: 'concept' },
+  { label: 'Le Coach', href: `${base}coach`, path: 'coach' },
+  { label: 'Les Cours', href: `${base}cours`, path: 'cours' },
+  { label: 'Coaching', href: `${base}coaching`, path: 'coaching' },
+  { label: 'Planning', href: `${base}planning`, path: 'planning' },
+  { label: 'Tarifs', href: `${base}tarifs`, path: 'tarifs' },
+  { label: 'Contact', href: `${base}contact`, path: 'contact' },
 ];
 ---
 
@@ -18,7 +25,7 @@ const navLinks = [
 
   <ul class="navbar__links">
     {navLinks.map(link => (
-      <li><a href={link.href}>{link.label}</a></li>
+      <li><a href={link.href} class:list={['navbar__link', { active: isActive(link.path) }]}>{link.label}</a></li>
     ))}
   </ul>
 
@@ -35,7 +42,7 @@ const navLinks = [
 <div class="mobile-menu" id="mobileMenu">
   <ul class="mobile-menu__links">
     {navLinks.map(link => (
-      <li><a href={link.href}>{link.label}</a></li>
+      <li><a href={link.href} class:list={['mobile-menu__link', { active: isActive(link.path) }]}>{link.label}</a></li>
     ))}
     <li><a href={`${base}contact`} class="mobile-menu__cta">Essai gratuit</a></li>
   </ul>
@@ -104,13 +111,18 @@ const navLinks = [
     color: var(--white);
   }
 
+  .navbar__link.active,
+  .mobile-menu__link.active {
+    color: var(--orange);
+  }
+
   .navbar__cta {
     font-family: var(--font-heading);
     font-size: 1rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0.6rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     background: var(--gradient);
     color: #0A0A0A;
     border: none;
@@ -195,10 +207,20 @@ const navLinks = [
   }
 
   .mobile-menu__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
     background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--bg);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
   }
 
   @media (max-width: 900px) {

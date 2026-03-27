@@ -3,8 +3,8 @@
 ## CRITIQUE
 
 - [x] **Mentions légales + RGPD** — Page `/mentions-legales` créée (inclut RGPD, cookies, droits). Infos société à compléter par le client.
-- [ ] **Bandeau cookies** — Google Fonts + AOS chargés depuis CDN externes sans consentement
-- [ ] **Formulaire contact** — `action="#"` ne soumet nulle part, brancher Formspree ou équivalent
+- [x] **Bandeau cookies** — Bandeau avec accepter/refuser, persisté en localStorage
+- [x] **Formulaire contact** — Branché sur Formspree → maxime@riggi.tech
 - [ ] **Liens réseaux sociaux** — Instagram, Facebook, TikTok pointent vers `#` (Footer + Contact)
 - [ ] **"Voir tous les avis"** — Lien cassé (`href="#"`) dans ReviewCard
 
@@ -13,7 +13,7 @@
 - [ ] **Images Unsplash** — 54 instances de placeholder, remplacer par vraies photos (salle, cours, Nasr)
 - [ ] **Contenu Planning** — Page placeholder "bientôt disponible"
 - [ ] **Contenu Tarifs** — Page placeholder "bientôt disponible"
-- [ ] **Page 404** — Aucune page 404 personnalisée
+- [x] **Page 404** — Page 404 brandée avec CTAs retour accueil + cours
 - [ ] **Analytics** — Aucun tracking (GA, Plausible, etc.)
 - [ ] **Accents manquants** — "Prêt a" → "Prêt à" sur planning, tarifs et autres pages
 - [ ] **Schema JSON-LD** — Compléter : adresse complète, téléphone, horaires, sameAs réseaux sociaux

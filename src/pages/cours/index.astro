@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import HeroSection from '../../components/HeroSection.astro';
 import ContentSection from '../../components/ContentSection.astro';
+import CourseCard from '../../components/CourseCard.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -16,7 +17,6 @@ const base = import.meta.env.BASE_URL;
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -28,7 +28,6 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="right"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Chez Victory Fit, les cours collectifs sont au cœur de l'expérience.</p>
@@ -38,227 +37,22 @@ const base = import.meta.env.BASE_URL;
     <p><strong>Que vous soyez débutant ou confirmé, chacun trouve sa place.</strong></p>
   </ContentSection>
 
-  <!-- LES MILLS -->
-  <ContentSection
-    title="Les programmes Les Mills"
-    mediaSrc="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80"
-    mediaAlt="Les Mills"
-    mediaPosition="left"
-    variant="dark"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/les-mills`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
+  <!-- TOUS LES COURS -->
+  <CourseCard
+    label="Nos cours"
+    title="Trouvez votre entraînement"
+    courses={[
+      { image: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80', title: 'Les Mills', description: 'Programmes rythmés par la musique, structurés et motivants.', href: `${base}cours/les-mills` },
+      { image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', title: 'Bungee Fitness', description: 'Sautez, volez et réalisez des mouvements dynamiques en apesanteur.', href: `${base}cours/bungee-fitness` },
+      { image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80', title: 'Boxe Training', description: 'Un entraînement explosif mêlant puissance, technique et cardio.', href: `${base}cours/boxe-training` },
+      { image: 'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800&q=80', title: 'Cardio Training', description: 'Séances HIIT pour brûler des calories et améliorer l\'endurance.', href: `${base}cours/cardio-training` },
+      { image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80', title: 'Body Sculpt', description: 'Renforcement musculaire complet pour tonifier tout le corps.', href: `${base}cours/body-sculpt` },
+      { image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80', title: 'EMS', description: 'Électrostimulation en coaching privé pour des résultats intensifs.', href: `${base}cours/ems` },
+      { image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', title: 'Step Freestyle', description: 'Cours chorégraphié mêlant cardio, coordination et rythme.', href: `${base}cours/step-freestyle` },
+      { image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', title: 'Sport doux', description: 'Yoga, pilates et stretching pour le bien-être et la récupération.', href: `${base}cours/sport-doux` },
+      { image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', title: 'Coaching personnalisé', description: 'Un accompagnement sur mesure adapté à vos objectifs.', href: `${base}coaching` },
     ]}
-  >
-    <p>Victory Fit propose plusieurs programmes Les Mills, reconnus dans le monde entier pour leur efficacité et leur énergie.</p>
-    <p>Des entraînements rythmés par la musique, structurés et motivants, qui permettent de progresser séance après séance.</p>
-    <p>Un format de cours collectif parmi les plus populaires au monde, apprécié pour :</p>
-    <ul>
-      <li>Son intensité</li>
-      <li>Sa structure</li>
-      <li>Ses résultats</li>
-      <li>Adapté à tous les niveaux</li>
-    </ul>
-  </ContentSection>
-
-  <!-- BUNGEE -->
-  <ContentSection
-    title="Le Bungee Fitness"
-    mediaSrc="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
-    mediaAlt="Bungee Fitness"
-    mediaPosition="right"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/bungee-fitness`, variant: 'primary' },
-    ]}
-  >
-    <p>Le Bungee Fitness apporte une dimension totalement différente à l'entraînement.</p>
-    <p>Attache à un harnais élastique, vous pouvez sauter, voler et réaliser des mouvements dynamiques tout en limitant les impacts sur les articulations.</p>
-    <p>Un cours à la fois :</p>
-    <ul>
-      <li>Fun</li>
-      <li>Intense</li>
-      <li>Original</li>
-      <li>Accessible</li>
-    </ul>
-    <p><strong>Une expérience unique qui mélange sport et plaisir.</strong></p>
-  </ContentSection>
-
-  <!-- BOXE -->
-  <ContentSection
-    title="Boxe Training"
-    mediaSrc="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80"
-    mediaAlt="Boxe Training"
-    mediaPosition="left"
-    variant="dark"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/boxe-training`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Un entraînement explosif et dynamique basé sur :</p>
-    <ul>
-      <li>Le travail aux sacs de frappe</li>
-      <li>Le cardio</li>
-      <li>La coordination</li>
-      <li>La technique de frappe (avec ou sans gants)</li>
-    </ul>
-    <p>Un cours idéal pour se défouler, évacuer le stress, améliorer son endurance et renforcer tout le corps.</p>
-    <p><strong>Un mélange parfait entre puissance, technique, cardio et plaisir.</strong></p>
-  </ContentSection>
-
-  <!-- CARDIO -->
-  <ContentSection
-    title="Cardio Training"
-    mediaSrc="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800&q=80"
-    mediaAlt="Cardio Training"
-    mediaPosition="right"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/cardio-training`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Des séances dynamiques orientées endurance et dépense calorique, basées sur le HIIT (High Intensity Interval Training).</p>
-    <p>Un travail complet pour améliorer votre condition physique et votre capacité respiratoire.</p>
-    <p>Idéal pour :</p>
-    <ul>
-      <li>Brûler des calories</li>
-      <li>Améliorer son cardio</li>
-      <li>Gagner en endurance</li>
-      <li>Se remettre en forme</li>
-    </ul>
-    <p><strong>Des séances rythmées, accessibles et adaptées à tous les niveaux.</strong></p>
-  </ContentSection>
-
-  <!-- BODY SCULPT -->
-  <ContentSection
-    title="Body Sculpt"
-    mediaSrc="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80"
-    mediaAlt="Body Sculpt"
-    mediaPosition="left"
-    variant="dark"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/body-sculpt`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Un entraînement complet axé sur le renforcement musculaire.</p>
-    <p>Des exercices variés pour travailler l'ensemble du corps : haut du corps, bas du corps, gainage.</p>
-    <p>Un cours idéal pour :</p>
-    <ul>
-      <li>Tonifier le corps</li>
-      <li>Renforcer les muscles</li>
-      <li>Améliorer la posture</li>
-      <li>Se sculpter physiquement</li>
-    </ul>
-    <p><strong>Des séances accessibles, progressives et adaptées à tous les niveaux.</strong></p>
-  </ContentSection>
-
-  <!-- EMS -->
-  <ContentSection
-    title="Électrostimulation (EMS)"
-    mediaSrc="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80"
-    mediaAlt="EMS"
-    mediaPosition="right"
-    ctas={[
-      { label: 'Réserver une séance EMS', href: `${base}contact`, variant: 'primary' },
-      { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Une technologie innovante permettant de solliciter les muscles en profondeur grâce à des impulsions électriques.</p>
-    <p>Des séances courtes mais très efficaces, idéales pour optimiser les résultats.</p>
-    <p>Un entraînement parfait pour :</p>
-    <ul>
-      <li>Renforcer les muscles</li>
-      <li>Tonifier le corps</li>
-      <li>Gagner du temps</li>
-      <li>Compléter les cours collectifs</li>
-    </ul>
-    <p><strong>Les séances EMS sont proposées en coaching privé, avec un accompagnement personnalisé et un tarif spécifique.</strong></p>
-    <p>Accessible à tous, avec un suivi adapté à chaque objectif.</p>
-  </ContentSection>
-
-  <!-- COACHING PERSONNALISE -->
-  <ContentSection
-    title="Coaching personnalisé"
-    mediaSrc="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
-    mediaAlt="Coaching personnalisé"
-    mediaPosition="left"
-    variant="dark"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}coaching`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Un accompagnement sur mesure, adapté à vos objectifs et à votre niveau.</p>
-    <p>Ici, chaque séance est pensée pour vous faire progresser efficacement, avec un suivi précis et motivant.</p>
-    <p>Objectifs possibles :</p>
-    <ul>
-      <li>Remise en forme</li>
-      <li>Perte de poids</li>
-      <li>Prise de muscle</li>
-      <li>Préparation physique</li>
-    </ul>
-    <p>Un coaching basé sur :</p>
-    <ul>
-      <li>L'écoute</li>
-      <li>L'adaptation</li>
-      <li>La progression</li>
-    </ul>
-    <p><strong>Un suivi individuel pour des résultats concrets et durables.</strong></p>
-    <p>Les séances se font sur réservation, avec un accompagnement personnalisé.</p>
-  </ContentSection>
-
-  <!-- STEP FREESTYLE -->
-  <ContentSection
-    title="Step Freestyle"
-    mediaSrc="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80"
-    mediaAlt="Step Freestyle"
-    mediaPosition="right"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/step-freestyle`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Un cours dynamique et rythmé basé sur des enchaînements chorégraphiés autour du step.</p>
-    <p>Une activité complète qui mélange : cardio, coordination, rythme, mémoire.</p>
-    <p>Un cours idéal pour :</p>
-    <ul>
-      <li>Se dépenser en musique</li>
-      <li>Améliorer sa coordination</li>
-      <li>Travailler son cardio</li>
-      <li>S'amuser</li>
-    </ul>
-    <p><strong>Accessible à tous, avec des niveaux progressifs.</strong></p>
-  </ContentSection>
-
-  <!-- SPORT DOUX -->
-  <ContentSection
-    title="Sport doux & relaxation"
-    mediaSrc="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
-    mediaAlt="Yoga et Pilates"
-    mediaPosition="left"
-    variant="dark"
-    ctas={[
-      { label: 'En savoir plus', href: `${base}cours/sport-doux`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
-    ]}
-  >
-    <p>Des séances dédiées au bien-être, à la récupération et à l'équilibre du corps.</p>
-    <p>Activités proposées : yoga, pilates, stretching.</p>
-    <p>Idéal pour :</p>
-    <ul>
-      <li>Améliorer la mobilité</li>
-      <li>Réduire le stress</li>
-      <li>Renforcer en douceur</li>
-      <li>Améliorer la posture</li>
-    </ul>
-  </ContentSection>
+  />
 
   <!-- POUR TOUS LES NIVEAUX -->
   <ContentSection
@@ -287,9 +81,8 @@ const base = import.meta.env.BASE_URL;
     fullWidth={true}
     variant="gradient"
     ctas={[
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'primary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
     ]}
   >
     <p><strong>La première victoire commence par une décision.</strong></p>

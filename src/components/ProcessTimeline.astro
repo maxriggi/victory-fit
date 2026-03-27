@@ -1,0 +1,220 @@
+---
+interface Props {
+  title?: string;
+  label?: string;
+  variant?: 'default' | 'dark';
+  steps: Array<{ number: string; title: string; description: string }>;
+}
+
+const {
+  title,
+  label,
+  variant = 'default',
+  steps,
+} = Astro.props;
+---
+
+<section
+  class={`timeline ${variant === 'dark' ? 'timeline--dark' : ''}`}
+  data-aos="fade-up"
+>
+  <div class="timeline__container">
+    {label && <h3 class="section-label">{label}</h3>}
+    {title && <h2 class="timeline__title">{title}</h2>}
+
+    <div class="timeline__track">
+      <div class="timeline__line" aria-hidden="true"></div>
+
+      {steps.map((step, i) => (
+        <div class="timeline__step" data-aos="fade-up" data-aos-delay={i * 120}>
+          <div class="timeline__circle">
+            <span class="timeline__number">{step.number}</span>
+          </div>
+          <h4 class="timeline__step-title">{step.title}</h4>
+          <p class="timeline__step-desc">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ─── Section ─── */
+  .timeline {
+    padding: var(--section-padding);
+    background: var(--bg);
+  }
+
+  .timeline--dark {
+    background: var(--bg-light);
+  }
+
+  .timeline__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* ─── Title ─── */
+  .timeline__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--white);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  /* ─── Track (horizontal desktop / vertical mobile) ─── */
+  .timeline__track {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  /* ─── Connecting line ─── */
+  .timeline__line {
+    position: absolute;
+    background: var(--gradient-horizontal);
+    border-radius: 2px;
+    /* Desktop: horizontal */
+    top: 32px;
+    left: 32px;
+    right: 32px;
+    height: 3px;
+    z-index: 0;
+  }
+
+  /* ─── Step ─── */
+  .timeline__step {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+  }
+
+  /* ─── Circle ─── */
+  .timeline__circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-deep), var(--burgundy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow:
+      0 0 0 6px var(--bg),
+      0 4px 24px rgba(242, 144, 49, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .timeline--dark .timeline__circle {
+    box-shadow:
+      0 0 0 6px var(--bg-light),
+      0 4px 24px rgba(242, 144, 49, 0.35);
+  }
+
+  .timeline__step:hover .timeline__circle {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 0 6px var(--bg),
+      0 6px 32px rgba(242, 144, 49, 0.5);
+  }
+
+  .timeline--dark .timeline__step:hover .timeline__circle {
+    box-shadow:
+      0 0 0 6px var(--bg-light),
+      0 6px 32px rgba(242, 144, 49, 0.5);
+  }
+
+  .timeline__number {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  /* ─── Step text ─── */
+  .timeline__step-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--white);
+    margin-top: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .timeline__step-desc {
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    color: var(--white-70);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    max-width: 220px;
+  }
+
+  /* ─── Mobile: vertical layout ─── */
+  @media (max-width: 768px) {
+    .timeline__track {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .timeline__line {
+      /* Vertical line */
+      top: 32px;
+      bottom: 32px;
+      left: 30px;
+      right: auto;
+      width: 3px;
+      height: auto;
+      background: linear-gradient(180deg, var(--orange), var(--orange-deep), var(--burgundy));
+    }
+
+    .timeline__step {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .timeline__step:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline__circle {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+    }
+
+    .timeline__step-title {
+      margin-top: 0;
+    }
+
+    .timeline__step-desc {
+      max-width: none;
+    }
+
+    /* Wrap title + desc in a virtual column */
+    .timeline__step {
+      flex-wrap: wrap;
+    }
+
+    .timeline__step-title,
+    .timeline__step-desc {
+      flex-basis: calc(100% - 60px - 1.5rem);
+    }
+  }
+</style>

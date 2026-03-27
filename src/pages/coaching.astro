@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContentSection from '../components/ContentSection.astro';
+import ProcessTimeline from '../components/ProcessTimeline.astro';
+import FeatureGrid from '../components/FeatureGrid.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -16,7 +18,6 @@ const base = import.meta.env.BASE_URL;
     ctas={[
       { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
       { label: 'Demander un bilan gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -74,40 +75,31 @@ const base = import.meta.env.BASE_URL;
   </ContentSection>
 
   <!-- BENEFICES -->
-  <ContentSection
+  <FeatureGrid
     label="Les bénéfices"
     title="Un accompagnement qui fait la différence"
-    fullWidth={true}
     variant="dark"
-  >
-    <ul>
-      <li>Programme 100% personnalisé</li>
-      <li>Suivi individuel et progression plus rapide</li>
-      <li>Motivation constante</li>
-      <li>Séances efficaces et optimisées</li>
-      <li>Résultats concrets et durables</li>
-    </ul>
-    <p><strong>Vous êtes accompagné du début à la fin.</strong></p>
-  </ContentSection>
+    features={[
+      { icon: '🎯', title: 'Personnalisé', description: 'Programme 100% adapté à votre niveau et à vos objectifs.' },
+      { icon: '📈', title: 'Progression rapide', description: 'Suivi individuel pour des résultats concrets et mesurables.' },
+      { icon: '💪', title: 'Motivation constante', description: 'Un coach présent pour vous pousser à chaque séance.' },
+      { icon: '⚡', title: 'Séances optimisées', description: 'Efficaces et structurées, chaque minute compte.' },
+      { icon: '✅', title: 'Résultats durables', description: 'Vous êtes accompagné du début à la fin.' },
+    ]}
+  />
 
   <!-- COMMENT CA SE PASSE -->
-  <ContentSection
+  <ProcessTimeline
     label="Le processus"
     title="Un suivi structuré"
-    mediaSrc="https://images.unsplash.com/photo-1596357395217-80de13130e92?w=800&q=80"
-    mediaAlt="Séance reelle"
-    mediaPosition="left"
-  >
-    <p>Le coaching se déroule en étapes claires :</p>
-    <ul>
-      <li>Échange et définition des objectifs</li>
-      <li>Mise en place d'un programme personnalisé</li>
-      <li>Séances encadrées en salle</li>
-      <li>Suivi et ajustements</li>
-      <li>Progression et résultats</li>
-    </ul>
-    <p><strong>Un accompagnement simple, clair et efficace.</strong></p>
-  </ContentSection>
+    steps={[
+      { number: '1', title: 'Échange', description: 'Définition de vos objectifs et bilan initial.' },
+      { number: '2', title: 'Programme', description: 'Mise en place d\'un plan personnalisé.' },
+      { number: '3', title: 'Séances', description: 'Entraînements encadrés en salle.' },
+      { number: '4', title: 'Suivi', description: 'Ajustements selon votre progression.' },
+      { number: '5', title: 'Résultats', description: 'Objectifs atteints, progression visible.' },
+    ]}
+  />
 
   <!-- L'EQUIPE -->
   <ContentSection
@@ -132,7 +124,6 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="left"
     ctas={[
       { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
-      { label: 'Demander un bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Possibilité d'intégrer des séances d'électrostimulation (EMS) dans votre programme.</p>
@@ -148,7 +139,6 @@ const base = import.meta.env.BASE_URL;
     ctas={[
       { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
       { label: 'Demander un bilan gratuit', href: `${base}contact`, variant: 'secondary' },
-      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>Le coaching personnalisé est le moyen le plus rapide d'atteindre vos objectifs.</strong></p>

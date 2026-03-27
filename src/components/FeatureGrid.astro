@@ -1,0 +1,129 @@
+---
+interface Props {
+  title?: string;
+  label?: string;
+  variant?: 'default' | 'dark';
+  features: Array<{ icon: string; title: string; description: string }>;
+}
+
+const {
+  title,
+  label,
+  variant = 'default',
+  features,
+} = Astro.props;
+---
+
+<section class={`feature-grid ${variant === 'dark' ? 'feature-grid--dark' : ''}`}>
+  <div class="feature-grid__container">
+    {label && (
+      <span class="feature-grid__label">{label}</span>
+    )}
+    {title && (
+      <h2 class="feature-grid__title">{title}</h2>
+    )}
+    <div class="feature-grid__grid">
+      {features.map((feature, i) => (
+        <div
+          class="feature-grid__card"
+          data-aos="fade-up"
+          data-aos-delay={String(i * 100)}
+        >
+          <span class="feature-grid__icon">{feature.icon}</span>
+          <h3 class="feature-grid__card-title">{feature.title}</h3>
+          <p class="feature-grid__card-desc">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .feature-grid {
+    padding: var(--section-padding);
+    background: var(--bg);
+  }
+
+  .feature-grid--dark {
+    background: var(--bg-light);
+  }
+
+  .feature-grid__container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .feature-grid__label {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-grid__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+
+  .feature-grid__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-grid__card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--white-10);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+
+  .feature-grid__card:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange);
+  }
+
+  .feature-grid__icon {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .feature-grid__card-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .feature-grid__card-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--white-70);
+  }
+
+  @media (max-width: 1024px) {
+    .feature-grid__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .feature-grid__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

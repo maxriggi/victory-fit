@@ -43,7 +43,8 @@ Core values: Strength, Vitality, Dynamism, Energy, Confidence.
 - **Animations:** AOS (Animate On Scroll) for scroll-triggered animations
 - **Fonts:** Bebas Neue + Inter (Google Fonts placeholders for Domus Titling + New Zen)
 - **Build:** `npm run dev` (dev server) / `npm run build` (static output to `dist/`)
-- **Pages:** index, concept, coach, cours, coaching, planning, tarifs, contact
+- **Pages:** index, concept, coach, cours, coaching, planning, tarifs, contact, mentions-legales
+- **Audit & tâches:** voir `TASKS.md` à la racine du projet
 
 ## Development Conventions
 - Components in `src/components/`, layouts in `src/layouts/`, pages in `src/pages/`

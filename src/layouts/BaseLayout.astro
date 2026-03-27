@@ -24,15 +24,18 @@ const {
 
 const defaultJsonLd = {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
+  "@type": "SportsActivityLocation",
   "name": "Victory Fit",
-  "description": "Salle de sport au centre-ville de Metz dédiée aux cours collectifs en présentiel.",
+  "alternateName": "Victory Fit — Sportivement Metz",
+  "description": "Salle de sport au centre-ville de Metz dédiée aux cours collectifs en présentiel. Les Mills, Bungee Fitness, Boxe Training, Coaching personnalisé, EMS.",
   "url": "https://victoryfit.fr",
   "logo": "https://victoryfit.fr/assets/logo-version-a-full.png",
   "image": "https://victoryfit.fr/assets/logo-version-a-full.png",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Centre-ville de Metz",
     "addressLocality": "Metz",
+    "postalCode": "57000",
     "addressRegion": "Grand Est",
     "addressCountry": "FR"
   },
@@ -41,13 +44,34 @@ const defaultJsonLd = {
     "latitude": 49.1193,
     "longitude": 6.1757
   },
+  "hasMap": "https://maps.google.com/?q=Victory+Fit+Metz",
   "priceRange": "€€",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Cash, Credit Card",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "07:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
   "areaServed": {
     "@type": "City",
     "name": "Metz"
   },
+  "founder": {
+    "@type": "Person",
+    "name": "Nasr",
+    "jobTitle": "Fondateur et coach sportif"
+  },
+  "keywords": "salle de sport Metz, cours collectifs, Les Mills, Bungee Fitness, coaching personnalisé, EMS, boxe training",
   "sameAs": []
 };
 
@@ -106,6 +130,7 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://victoryfit.fr');
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href={`${base}assets/favicon-32.png`}>
   <link rel="icon" type="image/png" href={`${base}assets/logo-version-b-icon.png`}>
+  <link rel="apple-touch-icon" href={`${base}assets/logo-version-b-icon.png`}>
   <link rel="manifest" href={`${base}manifest.json`}>
 
   <!-- Fonts (placeholders — replace with Domus Titling & New Zen) -->
@@ -125,9 +150,10 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://victoryfit.fr');
   </noscript>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
   <Navbar />
   {breadcrumbs.length > 0 && <Breadcrumb items={breadcrumbs} />}
-  <main>
+  <main id="main-content">
     <slot />
   </main>
   <Footer />

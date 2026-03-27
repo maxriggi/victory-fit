@@ -11,11 +11,12 @@ const base = import.meta.env.BASE_URL;
   <HeroSection
     title="Les cours Victory Fit"
     highlightWord="Victory Fit"
-    subtitle="Des entraînements variés, dynamiques et accessibles à tous.<br>Des cours collectifs en présentiel et en illimité, au cœur du centre-ville de Metz."
+    subtitle="Des entraînements variés, dynamiques et accessibles à tous.<br>Des cours collectifs en présentiel et en illimité, au cœur du centre-ville de Metz.<br><br>Ici, chaque séance est différente. Mais l'objectif reste le même : <strong>se dépasser, progresser et prendre du plaisir.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -27,11 +28,13 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="right"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Chez Victory Fit, les cours collectifs sont au cœur de l'expérience.</p>
     <p>L'énergie du groupe, la musique et le coaching créent une dynamique unique.</p>
     <p>Les séances sont en présentiel et en illimité, pour vous permettre de venir aussi souvent que vous le souhaitez.</p>
+    <p>Musique, motivation, énergie collective... tout est fait pour vous donner envie de revenir.</p>
     <p><strong>Que vous soyez débutant ou confirmé, chacun trouve sa place.</strong></p>
   </ContentSection>
 
@@ -44,10 +47,12 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/les-mills`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit propose plusieurs programmes Les Mills, reconnus dans le monde entier pour leur efficacité et leur énergie.</p>
+    <p>Des entraînements rythmés par la musique, structurés et motivants, qui permettent de progresser séance après séance.</p>
     <p>Un format de cours collectif parmi les plus populaires au monde, apprécié pour :</p>
     <ul>
       <li>Son intensité</li>
@@ -88,7 +93,7 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/boxe-training`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Un entraînement explosif et dynamique basé sur :</p>
@@ -96,7 +101,7 @@ const base = import.meta.env.BASE_URL;
       <li>Le travail aux sacs de frappe</li>
       <li>Le cardio</li>
       <li>La coordination</li>
-      <li>La technique de frappe</li>
+      <li>La technique de frappe (avec ou sans gants)</li>
     </ul>
     <p>Un cours idéal pour se défouler, évacuer le stress, améliorer son endurance et renforcer tout le corps.</p>
     <p><strong>Un mélange parfait entre puissance, technique, cardio et plaisir.</strong></p>
@@ -110,10 +115,11 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="right"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/cardio-training`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Des séances dynamiques orientées endurance et dépense calorique, basées sur le HIIT (High Intensity Interval Training).</p>
+    <p>Un travail complet pour améliorer votre condition physique et votre capacité respiratoire.</p>
     <p>Idéal pour :</p>
     <ul>
       <li>Brûler des calories</li>
@@ -133,7 +139,8 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/body-sculpt`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Un entraînement complet axé sur le renforcement musculaire.</p>
@@ -145,6 +152,7 @@ const base = import.meta.env.BASE_URL;
       <li>Améliorer la posture</li>
       <li>Se sculpter physiquement</li>
     </ul>
+    <p><strong>Des séances accessibles, progressives et adaptées à tous les niveaux.</strong></p>
   </ContentSection>
 
   <!-- EMS -->
@@ -154,8 +162,9 @@ const base = import.meta.env.BASE_URL;
     mediaAlt="EMS"
     mediaPosition="right"
     ctas={[
-      { label: 'En savoir plus', href: `${base}cours/ems`, variant: 'primary' },
+      { label: 'Réserver une séance EMS', href: `${base}contact`, variant: 'primary' },
       { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Une technologie innovante permettant de solliciter les muscles en profondeur grâce à des impulsions électriques.</p>
@@ -167,7 +176,8 @@ const base = import.meta.env.BASE_URL;
       <li>Gagner du temps</li>
       <li>Compléter les cours collectifs</li>
     </ul>
-    <p><strong>Les séances EMS sont proposées en coaching privé, avec un accompagnement personnalisé.</strong></p>
+    <p><strong>Les séances EMS sont proposées en coaching privé, avec un accompagnement personnalisé et un tarif spécifique.</strong></p>
+    <p>Accessible à tous, avec un suivi adapté à chaque objectif.</p>
   </ContentSection>
 
   <!-- COACHING PERSONNALISE -->
@@ -179,12 +189,27 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'En savoir plus', href: `${base}coaching`, variant: 'primary' },
-      { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Un accompagnement sur mesure, adapté à vos objectifs et à votre niveau.</p>
-    <p>Objectifs possibles : remise en forme, perte de poids, prise de muscle, préparation physique.</p>
+    <p>Ici, chaque séance est pensée pour vous faire progresser efficacement, avec un suivi précis et motivant.</p>
+    <p>Objectifs possibles :</p>
+    <ul>
+      <li>Remise en forme</li>
+      <li>Perte de poids</li>
+      <li>Prise de muscle</li>
+      <li>Préparation physique</li>
+    </ul>
+    <p>Un coaching basé sur :</p>
+    <ul>
+      <li>L'écoute</li>
+      <li>L'adaptation</li>
+      <li>La progression</li>
+    </ul>
     <p><strong>Un suivi individuel pour des résultats concrets et durables.</strong></p>
+    <p>Les séances se font sur réservation, avec un accompagnement personnalisé.</p>
   </ContentSection>
 
   <!-- STEP FREESTYLE -->
@@ -195,7 +220,8 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="right"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/step-freestyle`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Un cours dynamique et rythme basé sur des enchaînements chorégraphiés autour du step.</p>
@@ -219,7 +245,8 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'En savoir plus', href: `${base}cours/sport-doux`, variant: 'primary' },
-      { label: 'Voir le planning', href: `${base}planning`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Des séances dédiées au bien-être, à la récupération et à l'équilibre du corps.</p>
@@ -243,6 +270,17 @@ const base = import.meta.env.BASE_URL;
     <p><strong>L'objectif est de devenir meilleur qu'hier.</strong></p>
   </ContentSection>
 
+  <!-- L'EXPÉRIENCE VICTORY FIT -->
+  <ContentSection
+    title="L'expérience Victory Fit"
+    fullWidth={true}
+    variant="dark"
+  >
+    <p>Au-delà des exercices, chaque séance est une expérience.</p>
+    <p>Une énergie collective. Une motivation constante. Un dépassement de soi.</p>
+    <p>Et toujours cette sensation : <strong>la victoire sur soi-même.</strong></p>
+  </ContentSection>
+
   <!-- FINAL CTA -->
   <ContentSection
     title="Prêt a découvrir les cours Victory Fit ?"
@@ -250,7 +288,8 @@ const base = import.meta.env.BASE_URL;
     variant="gradient"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La première victoire commence par une décision.</strong></p>

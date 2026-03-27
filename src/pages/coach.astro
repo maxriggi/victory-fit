@@ -15,7 +15,8 @@ const base = import.meta.env.BASE_URL;
     backgroundImage="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=1920&q=80"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -53,6 +54,7 @@ const base = import.meta.env.BASE_URL;
     <p>La victoire de venir s'entraîner même les jours difficiles. La victoire de progresser. La victoire de ne rien lâcher.</p>
     <p>Victory Fit est construit autour de cet état d'esprit : <strong>chaque séance est une victoire.</strong></p>
     <p>Après plus de 16 ans d'expérience en Afrique du Nord, au Moyen-Orient et en Europe, l'objectif est devenu clair : créer un lieu à son image.</p>
+    <p>Les expériences acquises au fil des années permettent aujourd'hui de concrétiser un projet ambitieux : ouvrir un club de sport et de fitness portant une identité forte et une vision claire.</p>
   </ContentSection>
 
   <!-- L'AMBITION -->
@@ -70,6 +72,18 @@ const base = import.meta.env.BASE_URL;
       <li>Partage</li>
       <li>Plaisir de s'entraîner ensemble</li>
     </ul>
+  </ContentSection>
+
+  <!-- LE SPORT COMME ALLIÉ SANTÉ -->
+  <ContentSection
+    title="Le sport comme allié santé"
+    mediaSrc="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+    mediaAlt="Sport et santé"
+    mediaPosition="right"
+  >
+    <p>Le sport ne se limite pas à la performance — c'est un véritable allié pour la santé au quotidien.</p>
+    <p>Bouger régulièrement permet de se sentir mieux, de prévenir de nombreux troubles et de renforcer son bien-être physique et mental.</p>
+    <p><strong>Chez Victory Fit, chaque séance est aussi un pas vers un meilleur équilibre de vie.</strong></p>
   </ContentSection>
 
   <!-- SON APPROCHE -->
@@ -138,7 +152,7 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'Coaching personnalisé', href: `${base}coaching`, variant: 'primary' },
-      { label: 'Bilan gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Demander un bilan gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>En plus des cours collectifs, Nasr propose un accompagnement individuel entièrement personnalisé.</p>
@@ -153,14 +167,24 @@ const base = import.meta.env.BASE_URL;
     <p><strong>Chaque programme est entièrement adapté à la personne, pour garantir une progression efficace et sécurisée.</strong></p>
   </ContentSection>
 
+  <!-- L'ESPRIT VICTORY FIT -->
+  <ContentSection
+    title="L'esprit Victory Fit"
+    fullWidth={true}
+  >
+    <p>Avec Nasr, le sport devient une expérience. Une énergie. Une dynamique. Un moment à part.</p>
+    <p>Et séance après séance... <strong>la victoire devient une habitude.</strong></p>
+  </ContentSection>
+
   <!-- FINAL CTA -->
   <ContentSection
-    title="Prêt a t'entrainer avec Nasr ?"
+    title="Prêt à t'entraîner avec Nasr et la famille VICTORY FIT ?"
     fullWidth={true}
     variant="gradient"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La première victoire commence par une décision.</strong></p>

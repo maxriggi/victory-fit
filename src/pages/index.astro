@@ -11,14 +11,15 @@ const base = import.meta.env.BASE_URL;
 
   <!-- HERO -->
   <HeroSection
-    title="Dépassez vos limites."
-    highlightWord="limites."
-    subtitle="La salle de sport du centre-ville de Metz dédiée aux cours collectifs en présentiel.<br><strong>Sportivement Metz.</strong>"
+    title="VICTORY FIT"
+    highlightWord="VICTORY FIT"
+    subtitle="La salle de sport du centre-ville de Metz dédiée aux cours collectifs en présentiel.<br><br>Énergie du groupe. Motivation du coach. Et cette sensation unique à la fin d'une séance : <strong>la victoire sur soi-même.</strong>"
     backgroundImage="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=1920&q=80"
     showLogo={true}
     ctas={[
-      { label: 'Découvrir', href: `${base}concept`, variant: 'primary' },
-      { label: 'Nous rejoindre', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   />
 
@@ -76,7 +77,7 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="right"
     ctas={[
       { label: 'Voir les cours', href: `${base}cours`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit propose plusieurs types d'entraînement :</p>
@@ -87,6 +88,7 @@ const base = import.meta.env.BASE_URL;
       <li>Cardio</li>
       <li>Coaching personnalisé</li>
       <li>EMS</li>
+      <li>Séances fun et intenses</li>
     </ul>
     <p>Des cours conçus pour progresser, se dépasser et prendre plaisir à bouger. <strong>Tous les niveaux sont les bienvenus.</strong></p>
   </ContentSection>
@@ -101,7 +103,7 @@ const base = import.meta.env.BASE_URL;
     variant="dark"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Nous rejoindre', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Plusieurs créneaux chaque jour pour s'entraîner quand vous voulez.</p>
@@ -112,7 +114,7 @@ const base = import.meta.env.BASE_URL;
   <!-- ABONNEMENT -->
   <ContentSection
     label="Tarifs"
-    title="Des cours collectifs en illimité"
+    title="Des cours collectifs en présentiel et en illimité"
     mediaSrc="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
     mediaAlt="Ambiance Victory Fit"
     mediaPosition="right"
@@ -134,7 +136,8 @@ const base = import.meta.env.BASE_URL;
     mediaPosition="left"
     variant="dark"
     ctas={[
-      { label: 'Nous contacter', href: `${base}contact`, variant: 'primary' },
+      { label: 'Voir l\'adresse', href: `${base}contact`, variant: 'primary' },
+      { label: 'Nous contacter', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p>Victory Fit est situé en plein centre-ville de Metz, facilement accessible.</p>
@@ -158,7 +161,8 @@ const base = import.meta.env.BASE_URL;
     variant="gradient"
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
-      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'secondary' },
+      { label: 'Je rejoins la famille Victory Fit', href: `${base}contact`, variant: 'secondary' },
     ]}
   >
     <p><strong>La première victoire commence simplement par une décision.</strong></p>

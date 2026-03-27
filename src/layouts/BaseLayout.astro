@@ -132,6 +132,17 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://victoryfit.fr');
   </main>
   <Footer />
 
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="cookie-banner" style="display:none;">
+    <div class="cookie-banner__inner">
+      <p>Ce site utilise des services tiers (Google Fonts) susceptibles de déposer des cookies. En poursuivant votre navigation, vous acceptez leur utilisation. <a href={`${base}mentions-legales`}>En savoir plus</a></p>
+      <div class="cookie-banner__actions">
+        <button id="cookie-accept" class="btn btn--primary" style="font-size: 0.85rem; padding: 0.5rem 1.25rem;">Accepter</button>
+        <button id="cookie-refuse" class="btn btn--secondary" style="font-size: 0.85rem; padding: 0.5rem 1.25rem;">Refuser</button>
+      </div>
+    </div>
+  </div>
+
   <script is:inline src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
@@ -141,6 +152,27 @@ const ogImageURL = new URL(ogImage, Astro.site || 'https://victoryfit.fr');
           easing: 'ease-out',
           once: true,
           offset: 80,
+        });
+      }
+
+      // Cookie banner
+      var banner = document.getElementById('cookie-banner');
+      var consent = localStorage.getItem('vf-cookie-consent');
+      if (!consent && banner) {
+        banner.style.display = 'block';
+      }
+      var acceptBtn = document.getElementById('cookie-accept');
+      var refuseBtn = document.getElementById('cookie-refuse');
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+          localStorage.setItem('vf-cookie-consent', 'accepted');
+          banner.style.display = 'none';
+        });
+      }
+      if (refuseBtn) {
+        refuseBtn.addEventListener('click', function() {
+          localStorage.setItem('vf-cookie-consent', 'refused');
+          banner.style.display = 'none';
         });
       }
     });

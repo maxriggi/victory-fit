@@ -29,7 +29,7 @@ const {
           data-aos="fade-up"
           data-aos-delay={String(i * 100)}
         >
-          <span class="feature-grid__icon">{feature.icon}</span>
+          <span class="feature-grid__icon" set:html={feature.icon} />
           <h3 class="feature-grid__card-title">{feature.title}</h3>
           <p class="feature-grid__card-desc">{feature.description}</p>
         </div>
@@ -93,10 +93,20 @@ const {
   }
 
   .feature-grid__icon {
-    display: block;
-    font-size: 2.5rem;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(242, 144, 49, 0.15), rgba(239, 108, 62, 0.1));
+    color: var(--orange);
     margin-bottom: 1.25rem;
+  }
+
+  .feature-grid__icon :global(svg) {
+    width: 28px;
+    height: 28px;
   }
 
   .feature-grid__card-title {

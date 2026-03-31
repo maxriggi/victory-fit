@@ -48,7 +48,7 @@ const hasMedia = !!mediaSrc;
 
     <div class="content-section__body">
       {label && <h3 class="section-label">{label}</h3>}
-      {title && <h2 class="content-section__title">{title}</h2>}
+      {title && <h2 class="content-section__title" set:html={title} />}
       <div class="content-section__text">
         <slot />
       </div>
@@ -136,7 +136,7 @@ const hasMedia = !!mediaSrc;
     content: '';
     width: 6px;
     height: 6px;
-    background: var(--orange);
+    background: var(--accent);
     border-radius: 50%;
     flex-shrink: 0;
   }
@@ -147,7 +147,7 @@ const hasMedia = !!mediaSrc;
   }
 
   .content-section__text :global(blockquote) {
-    border-left: 3px solid var(--orange);
+    border-left: 3px solid var(--accent);
     padding-left: 1.25rem;
     margin: 1.5rem 0;
     font-size: 1.25rem;

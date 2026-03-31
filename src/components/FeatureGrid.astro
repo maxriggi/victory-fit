@@ -3,6 +3,7 @@ interface Props {
   title?: string;
   label?: string;
   variant?: 'default' | 'dark';
+  columns?: number;
   features: Array<{ icon: string; title: string; description: string }>;
 }
 
@@ -10,6 +11,7 @@ const {
   title,
   label,
   variant = 'default',
+  columns,
   features,
 } = Astro.props;
 ---
@@ -22,7 +24,7 @@ const {
     {title && (
       <h2 class="feature-grid__title">{title}</h2>
     )}
-    <div class="feature-grid__grid">
+    <div class="feature-grid__grid" style={columns ? `grid-template-columns: repeat(${columns}, 1fr)` : undefined}>
       {features.map((feature, i) => (
         <div
           class="feature-grid__card"
@@ -60,7 +62,7 @@ const {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--orange);
+    color: var(--accent);
     margin-bottom: 0.75rem;
   }
 
@@ -89,7 +91,7 @@ const {
 
   .feature-grid__card:hover {
     transform: translateY(-4px);
-    border-color: var(--orange);
+    border-color: var(--accent);
   }
 
   .feature-grid__icon {
@@ -99,8 +101,8 @@ const {
     width: 56px;
     height: 56px;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(242, 144, 49, 0.15), rgba(239, 108, 62, 0.1));
-    color: var(--orange);
+    background: linear-gradient(135deg, rgba(217, 79, 79, 0.15), rgba(160, 48, 48, 0.1));
+    color: var(--accent);
     margin-bottom: 1.25rem;
   }
 
@@ -123,6 +125,7 @@ const {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--white-70);
+    text-wrap: pretty;
   }
 
   @media (max-width: 1024px) {

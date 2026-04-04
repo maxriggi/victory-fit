@@ -1,0 +1,13 @@
+# Heavy files — no need to read these
+*.pdf
+*.docx
+*.DS_Store
+
+# Binary assets
+public/assets/*.jpg
+public/assets/*.png
+public/assets/*.webp
+
+# Build output & deps
+node_modules/
+dist/

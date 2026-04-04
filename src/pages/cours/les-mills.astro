@@ -7,7 +7,7 @@ import RelatedCourses from '../../components/RelatedCourses.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Les Mills — Victory Fit" description="Programmes Les Mills chez Victory Fit à Metz : BodyPump, BodyCombat, BodyAttack, BodyBalance. Cours collectifs reconnus dans le monde entier." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Les Mills' }]}>
+<BaseLayout title="Les Mills — Victory Fit" description="Programmes Les Mills chez Victory Fit à Metz : BodyAttack, BodyCombat, BodyPump, Les Mills CORE, BodyJam. Cours collectifs reconnus dans le monde entier." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Les Mills' }]}>
 
   <HeroSection
     title="Les Mills"
@@ -107,41 +107,47 @@ const base = import.meta.env.BASE_URL;
     </ul>
   </ContentSection>
 
-  <!-- BODYBALANCE -->
+  <!-- LES MILLS CORE -->
   <ContentSection
-    title="BodyBalance"
-    label="Yoga, tai chi & pilates"
-    mediaSrc="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80"
-    mediaAlt="BodyBalance"
+    title="Les Mills CORE"
+    label="Gainage & abdominaux"
+    mediaSrc="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+    mediaAlt="Les Mills CORE"
     mediaPosition="right"
+    ctas={[
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+    ]}
   >
-    <p>Un cours inspire du yoga, du tai chi et du Pilates. Des enchaînements fluides de postures et de mouvements sur une musique apaisante, avec une relaxation guidee en fin de séance.</p>
+    <p>Un entraînement scientifiquement conçu pour renforcer l'ensemble de la sangle abdominale : abdos, obliques et muscles du dos. Des exercices au sol et debout, avec et sans élastique de résistance.</p>
     <ul>
-      <li>55 minutes de bien-être</li>
-      <li>Souplesse, équilibre et force du core</li>
-      <li>Réduction du stress et pleine conscience</li>
-      <li>Complément idéal aux cours intenses</li>
+      <li>30 minutes de travail ciblé</li>
+      <li>Renforcement du dos et prévention des blessures</li>
+      <li>Amélioration de la posture et de l'équilibre</li>
+      <li>Complément idéal à tous les autres cours</li>
     </ul>
-    <p><strong>Accessible à tous, y compris les débutants complets et les seniors.</strong></p>
+    <p><strong>Accessible à tous les niveaux — chacun adapte l'intensité.</strong></p>
   </ContentSection>
 
-  <!-- GRIT -->
+  <!-- BODYJAM -->
   <ContentSection
-    title="Les Mills GRIT"
-    label="HIIT extreme"
-    mediaSrc="https://images.unsplash.com/photo-1601422407692-ec4eeec1d9b3?w=800&q=80"
-    mediaAlt="GRIT HIIT"
+    title="BodyJam"
+    label="Danse & cardio"
+    mediaSrc="https://images.unsplash.com/photo-1524594152303-9fd13543fe6e?w=800&q=80"
+    mediaAlt="BodyJam"
     mediaPosition="left"
     variant="dark"
+    ctas={[
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+    ]}
   >
-    <p>Le programme HIIT de Les Mills : 30 minutes d'effort maximal. Existe en trois variantes : Strength (barre et poids), Cardio (poids du corps) et Athletic (agilité).</p>
+    <p>Le cours de danse de Les Mills : des chorégraphies fun et accessibles sur les derniers tubes, mêlant hip-hop, house, dancehall et pop. Aucune expérience en danse requise.</p>
     <ul>
-      <li>30 minutes seulement — court et intense</li>
-      <li>~400 calories brûlées (effet afterburn inclus)</li>
-      <li>Boost du métabolisme pendant des heures après la séance</li>
-      <li>Niveau intermédiaire a avance recommandé</li>
+      <li>55 minutes de cardio dansé</li>
+      <li>~530 calories brûlées en s'amusant</li>
+      <li>Coordination, confiance et expression corporelle</li>
+      <li>Ambiance collective et bonne humeur garanties</li>
     </ul>
-    <p><strong>Pour ceux qui veulent repousser leurs limites en un minimum de temps.</strong></p>
+    <p><strong>Le cours où l'on oublie qu'on fait du sport.</strong></p>
   </ContentSection>
 
   <!-- CE QUI REND LES MILLS UNIQUE -->

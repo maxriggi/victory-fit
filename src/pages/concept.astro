@@ -59,10 +59,29 @@ const base = import.meta.env.BASE_URL;
     mediaSrc="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80"
     mediaAlt="Bungee Fitness Victory Fit"
     mediaPosition="right"
+    ctas={[
+      { label: 'En savoir plus', href: `${base}cours/bungee-fitness`, variant: 'secondary' },
+    ]}
   >
     <p>Le Bungee Fitness apporte une dimension totalement différente à l'entraînement.</p>
-    <p>Attache à un harnais élastique, vous pouvez sauter, voler et réaliser des mouvements dynamiques tout en protégeant vos articulations.</p>
+    <p>Attaché à un harnais élastique, vous pouvez sauter, voler et réaliser des mouvements dynamiques tout en protégeant vos articulations.</p>
     <p><strong>Un cours à la fois fun, intense et accessible.</strong></p>
+  </ContentSection>
+
+  <!-- CARDIO BOXING -->
+  <ContentSection
+    title="Le Cardio Boxing"
+    mediaSrc="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80"
+    mediaAlt="Cardio Boxing Victory Fit"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'En savoir plus', href: `${base}cours/boxe-training`, variant: 'secondary' },
+    ]}
+  >
+    <p>Un entraînement cardio inspiré des sports de combat : coups de poing, esquives, déplacements, le tout sur une musique intense.</p>
+    <p>Aucun contact, aucune expérience requise. Juste de l'énergie, du rythme et un défoulement total.</p>
+    <p><strong>Le cours idéal pour évacuer le stress et brûler un maximum de calories.</strong></p>
   </ContentSection>
 
   <!-- ACCOMPAGNEMENT -->
@@ -70,8 +89,7 @@ const base = import.meta.env.BASE_URL;
     title="Un accompagnement qui fait la différence"
     mediaSrc="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
     mediaAlt="Nasr aide un participant"
-    mediaPosition="left"
-    variant="dark"
+    mediaPosition="right"
     ctas={[
       { label: 'Réserver un cours d\'essai gratuit', href: `${base}contact`, variant: 'primary' },
     ]}
@@ -86,7 +104,11 @@ const base = import.meta.env.BASE_URL;
     title="L'électrostimulation"
     mediaSrc="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=800&q=80"
     mediaAlt="Électrostimulation Victory Fit"
-    mediaPosition="right"
+    mediaPosition="left"
+    variant="dark"
+    ctas={[
+      { label: 'En savoir plus', href: `${base}cours/ems`, variant: 'secondary' },
+    ]}
   >
     <p>Victory Fit propose également des séances d'électrostimulation musculaire.</p>
     <p>Cette technologie permet de solliciter les muscles de manière très intense en un temps réduit.</p>
@@ -98,8 +120,7 @@ const base = import.meta.env.BASE_URL;
     title="Le coaching privé"
     mediaSrc="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80"
     mediaAlt="Coaching privé Victory Fit"
-    mediaPosition="left"
-    variant="dark"
+    mediaPosition="right"
   >
     <p>Pour ceux qui souhaitent un suivi personnalisé, Victory Fit propose également des séances de coaching privé.</p>
     <p><strong>Objectifs sportifs, remise en forme, progression spécifique : le programme est adapté à vos besoins.</strong></p>

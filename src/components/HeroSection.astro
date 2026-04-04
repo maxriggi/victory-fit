@@ -33,24 +33,27 @@ function renderTitle(title: string, highlightWord?: string) {
   </div>
 
   <div class="hero__body">
-    <div class="hero__content">
-      <h1 class="hero__title" set:html={renderTitle(title, highlightWord)} />
-      <p class="hero__subtitle" set:html={subtitle} />
-      {ctas.length > 0 && (
-        <div class="hero__ctas cta-group">
-          {ctas.map(cta => (
-            <a href={cta.href} class={`btn btn--${cta.variant || 'primary'}`}>
-              {cta.label}
-              {cta.variant === 'secondary' && <span class="btn__arrow">&rarr;</span>}
-            </a>
-          ))}
+    <div class="hero__row">
+      <div class="hero__content">
+        <h1 class="hero__title" set:html={renderTitle(title, highlightWord)} />
+        <p class="hero__subtitle" set:html={subtitle} />
+      </div>
+
+      {showLogo && (
+        <div class="hero__visual">
+          <img src={`${base}assets/logo-version-a-full.png`} alt="Victory Fit" width="497" height="438" />
         </div>
       )}
     </div>
 
-    {showLogo && (
-      <div class="hero__visual">
-        <img src={`${base}assets/logo-version-a-full.png`} alt="Victory Fit" width="497" height="438" />
+    {ctas.length > 0 && (
+      <div class="hero__ctas cta-group">
+        {ctas.map(cta => (
+          <a href={cta.href} class={`btn btn--${cta.variant || 'primary'}`}>
+            {cta.label}
+            {cta.variant === 'secondary' && <span class="btn__arrow">&rarr;</span>}
+          </a>
+        ))}
       </div>
     )}
   </div>
@@ -111,12 +114,18 @@ function renderTitle(title: string, highlightWord?: string) {
     position: relative;
     z-index: 5;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 6rem 3rem 4rem;
     gap: 2rem;
     max-width: var(--container-max);
     margin: 0 auto;
     width: 100%;
+  }
+
+  .hero__row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
 
   .hero__content {
@@ -143,7 +152,7 @@ function renderTitle(title: string, highlightWord?: string) {
     line-height: 1.7;
     color: var(--white-70);
     max-width: 560px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
     opacity: 0;
     transform: translateY(25px);
     animation: fadeSlideUp 0.8s ease-out 0.5s forwards;
@@ -180,9 +189,12 @@ function renderTitle(title: string, highlightWord?: string) {
 
   @media (max-width: 900px) {
     .hero__body {
-      flex-direction: column;
       padding: 5rem 1.5rem 3rem;
       text-align: center;
+    }
+
+    .hero__row {
+      flex-direction: column;
     }
 
     .hero__content {
@@ -191,6 +203,7 @@ function renderTitle(title: string, highlightWord?: string) {
 
     .hero__ctas {
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero__title {

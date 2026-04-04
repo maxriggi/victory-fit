@@ -153,6 +153,14 @@ function renderTitle(title: string, highlightWord?: string) {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeSlideUp 0.8s ease-out 0.7s forwards;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .hero__ctas .btn {
+    min-width: 0;
+    white-space: nowrap;
+    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
   }
 
   .hero__visual {
@@ -179,6 +187,10 @@ function renderTitle(title: string, highlightWord?: string) {
 
     .hero__content {
       align-items: center;
+    }
+
+    .hero__ctas {
+      flex-wrap: wrap;
     }
 
     .hero__title {

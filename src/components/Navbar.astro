@@ -7,11 +7,22 @@ function isActive(path: string) {
   if (path === '') return currentPath === cleanBase + '/' || currentPath === cleanBase;
   return currentPath.startsWith(fullPath);
 }
+
+const courseLinks = [
+  { label: 'Les Mills', href: `${base}cours/les-mills` },
+  { label: 'Bungee Fitness', href: `${base}cours/bungee-fitness` },
+  { label: 'Cardio Boxing', href: `${base}cours/boxe-training` },
+  { label: 'Cardio Training', href: `${base}cours/cardio-training` },
+  { label: 'Body Sculpt', href: `${base}cours/body-sculpt` },
+  { label: 'EMS', href: `${base}cours/ems` },
+  { label: 'Step Freestyle', href: `${base}cours/step-freestyle` },
+  { label: 'Sport Doux', href: `${base}cours/sport-doux` },
+];
+
 const navLinks = [
   { label: 'Accueil', href: base, path: '' },
   { label: 'Concept', href: `${base}concept`, path: 'concept' },
   { label: 'Le Coach', href: `${base}coach`, path: 'coach' },
-  { label: 'Les Cours', href: `${base}cours`, path: 'cours' },
   { label: 'Coaching', href: `${base}coaching`, path: 'coaching' },
   { label: 'Planning', href: `${base}planning`, path: 'planning' },
   { label: 'Tarifs', href: `${base}tarifs`, path: 'tarifs' },
@@ -25,7 +36,21 @@ const navLinks = [
   </a>
 
   <ul class="navbar__links">
-    {navLinks.map(link => (
+    {navLinks.slice(0, 3).map(link => (
+      <li><a href={link.href} class:list={['navbar__link', { active: isActive(link.path) }]}>{link.label}</a></li>
+    ))}
+    <li class="navbar__dropdown">
+      <a href={`${base}cours`} class:list={['navbar__link', { active: isActive('cours') }]} aria-haspopup="true" aria-expanded="false">
+        Les Cours <svg class="navbar__chevron" aria-hidden="true" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="dropdown" role="menu">
+        <a href={`${base}cours`} class="dropdown__link dropdown__link--all">Tous les cours</a>
+        {courseLinks.map(link => (
+          <a href={link.href} class="dropdown__link">{link.label}</a>
+        ))}
+      </div>
+    </li>
+    {navLinks.slice(3).map(link => (
       <li><a href={link.href} class:list={['navbar__link', { active: isActive(link.path) }]}>{link.label}</a></li>
     ))}
   </ul>
@@ -42,7 +67,21 @@ const navLinks = [
 <!-- Mobile menu overlay -->
 <div class="mobile-menu" id="mobileMenu">
   <ul class="mobile-menu__links">
-    {navLinks.map(link => (
+    {navLinks.slice(0, 3).map(link => (
+      <li><a href={link.href} class:list={['mobile-menu__link', { active: isActive(link.path) }]}>{link.label}</a></li>
+    ))}
+    <li class="mobile-menu__submenu">
+      <button class="mobile-menu__link mobile-menu__submenu-toggle" data-submenu>
+        Les Cours <svg class="navbar__chevron" aria-hidden="true" width="12" height="7" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <ul class="mobile-menu__submenu-list">
+        <li><a href={`${base}cours`} class="mobile-menu__sublink">Tous les cours</a></li>
+        {courseLinks.map(link => (
+          <li><a href={link.href} class="mobile-menu__sublink">{link.label}</a></li>
+        ))}
+      </ul>
+    </li>
+    {navLinks.slice(3).map(link => (
       <li><a href={link.href} class:list={['mobile-menu__link', { active: isActive(link.path) }]}>{link.label}</a></li>
     ))}
     <li><a href={`${base}contact`} class="mobile-menu__cta">Je rejoins la famille</a></li>
@@ -64,14 +103,27 @@ const navLinks = [
     body.style.overflow = isOpen ? 'hidden' : '';
   });
 
+  function closeMenu() {
+    menu.classList.remove('is-open');
+    toggle.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    body.style.overflow = '';
+    var openSub = menu.querySelector('.mobile-menu__submenu.is-open');
+    if (openSub) openSub.classList.remove('is-open');
+  }
+
   menu.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      menu.classList.remove('is-open');
-      toggle.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
+
+  // Mobile submenu toggle
+  var submenuBtn = menu.querySelector('[data-submenu]');
+  if (submenuBtn) {
+    submenuBtn.addEventListener('click', function() {
+      var parent = submenuBtn.closest('.mobile-menu__submenu');
+      if (parent) parent.classList.toggle('is-open');
+    });
+  }
 })();
 </script>
 
@@ -117,6 +169,84 @@ const navLinks = [
     color: var(--accent);
   }
 
+  /* ── Dropdown ── */
+  .navbar__chevron {
+    margin-left: 0.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar__dropdown {
+    position: relative;
+  }
+
+  .navbar__dropdown:hover .navbar__chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background: rgba(15, 15, 15, 0.97);
+    border: 1px solid var(--white-10);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+    backdrop-filter: blur(12px);
+  }
+
+  /* Invisible bridge to prevent hover gap */
+  .dropdown::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+  }
+
+  .navbar__dropdown:hover .dropdown,
+  .navbar__dropdown:focus-within .dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navbar__dropdown:focus-within .navbar__chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown__link {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--white-70);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .dropdown__link:hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .dropdown__link--all {
+    color: var(--accent);
+    border-bottom: 1px solid var(--white-10);
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.7rem;
+  }
+
+  /* ── Navbar CTA ── */
   .navbar__cta {
     font-family: var(--font-heading);
     font-size: 1rem;
@@ -137,6 +267,7 @@ const navLinks = [
     box-shadow: 0 4px 20px rgba(217, 79, 79, 0.35);
   }
 
+  /* ── Toggle ── */
   .navbar__toggle {
     display: none;
     flex-direction: column;
@@ -166,7 +297,7 @@ const navLinks = [
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  /* Mobile menu overlay */
+  /* ── Mobile menu overlay ── */
   .mobile-menu {
     position: fixed;
     inset: 0;
@@ -193,7 +324,8 @@ const navLinks = [
     gap: 1.5rem;
   }
 
-  .mobile-menu__links a {
+  .mobile-menu__links a,
+  .mobile-menu__submenu-toggle {
     font-family: var(--font-heading);
     font-size: 2rem;
     color: var(--white);
@@ -203,7 +335,50 @@ const navLinks = [
     transition: color 0.3s ease;
   }
 
-  .mobile-menu__links a:hover {
+  .mobile-menu__links a:hover,
+  .mobile-menu__submenu-toggle:hover {
+    color: var(--accent);
+  }
+
+  /* ── Mobile submenu ── */
+  .mobile-menu__submenu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .mobile-menu__submenu-toggle .navbar__chevron {
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-menu__submenu.is-open .navbar__chevron {
+    transform: rotate(180deg);
+  }
+
+  .mobile-menu__submenu-list {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0;
+  }
+
+  .mobile-menu__submenu.is-open .mobile-menu__submenu-list {
+    max-height: 500px;
+    padding: 0.75rem 0 0;
+  }
+
+  .mobile-menu__links .mobile-menu__sublink {
+    font-size: 1.1rem;
+    color: var(--white-70);
+    display: block;
+    padding: 0.4rem 0;
+  }
+
+  .mobile-menu__links .mobile-menu__sublink:hover {
     color: var(--accent);
   }
 

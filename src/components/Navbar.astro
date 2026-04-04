@@ -8,6 +8,7 @@ function isActive(path: string) {
   return currentPath.startsWith(fullPath);
 }
 const navLinks = [
+  { label: 'Accueil', href: base, path: '' },
   { label: 'Concept', href: `${base}concept`, path: 'concept' },
   { label: 'Le Coach', href: `${base}coach`, path: 'coach' },
   { label: 'Les Cours', href: `${base}cours`, path: 'cours' },
@@ -20,7 +21,7 @@ const navLinks = [
 
 <nav class="navbar">
   <a href={base} class="navbar__logo">
-    <img src={`${base}assets/logo-version-b-icon.png`} alt="Victory Fit" width="44" height="39" />
+    <img src={`${base}assets/logo-version-b-icon.png`} alt="Victory Fit" width="56" height="49" />
   </a>
 
   <ul class="navbar__links">
@@ -85,14 +86,14 @@ const navLinks = [
   }
 
   .navbar__logo img {
-    height: 44px;
+    height: 56px;
     width: auto;
   }
 
   .navbar__links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
   }
 
@@ -241,7 +242,7 @@ const navLinks = [
       padding: 1rem;
     }
     .navbar__logo img {
-      height: 32px;
+      height: 40px;
     }
   }
 </style>

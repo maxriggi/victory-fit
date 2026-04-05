@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Message envoyé — Victory Fit" description="Votre message a bien été envoyé. L'équipe Victory Fit vous recontactera rapidement.">
+
+  <section class="merci">
+    <div class="merci__inner">
+      <h1 class="merci__title">Message <span class="gradient-text">envoyé</span></h1>
+      <p class="merci__text">Merci pour votre message ! L'équipe Victory Fit vous recontactera dans les plus brefs délais.</p>
+      <div class="cta-group" style="justify-content: center; margin-top: 2rem;">
+        <a href={base} class="btn btn--primary">Retour à l'accueil</a>
+        <a href={`${base}planning`} class="btn btn--secondary">Voir le planning</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .merci {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-padding);
+    text-align: center;
+  }
+
+  .merci__inner {
+    max-width: 600px;
+  }
+
+  .merci__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .merci__text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--white-70);
+  }
+</style>

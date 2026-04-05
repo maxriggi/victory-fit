@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import ContentSection from '../components/ContentSection.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -45,6 +45,7 @@ const base = import.meta.env.BASE_URL;
         <p style="margin-bottom: 1.5rem;">Remplissez le formulaire pour réserver votre premier cours d'essai gratuit.</p>
         <form class="contact-form" action="https://formspree.io/f/mpqooevq" method="POST">
           <input type="hidden" name="_subject" value="Nouveau contact Victory Fit">
+          <input type="hidden" name="_next" value="https://victoryfit.fr/contact/merci">
           <input type="text" name="_gotcha" style="display:none">
           <div class="form-group">
             <label for="name">Nom complet</label>

@@ -28,6 +28,7 @@ const base = import.meta.env.BASE_URL;
     mediaSrc={`${base}assets/nasr-jaziri-coach-victoryfit.jpg`}
     mediaAlt="Nasr Jaziri, fondateur et coach de Victory Fit"
     mediaPosition="right"
+    id="coach-portrait"
   >
     <p>Plus de 16 ans d'expérience dans le sport et le fitness.</p>
     <p>Un parcours international :</p>
@@ -185,4 +186,9 @@ const base = import.meta.env.BASE_URL;
     <p><strong>La première victoire commence par une décision.</strong></p>
   </ContentSection>
 
+  <style is:global>
+    #coach-portrait .content-section__media img {
+      object-position: top;
+    }
+  </style>
 </BaseLayout>

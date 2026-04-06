@@ -22,7 +22,6 @@ body {
 :root {
   /* Brand colors — rouge grenat */
   --burgundy: #7A1B1F;
-  --burgundy-light: #D94F4F; /* WCAG AA-safe variant for gradients on dark bg (4.89:1) */
   --accent: #D94F4F;
   --accent-deep: #A03030;
   --bg: #0A0A0A;
@@ -30,6 +29,7 @@ body {
   --white: #FFFFFF;
   --white-70: rgba(255, 255, 255, 0.78); /* adjusted for WCAG AA */
   --white-50: rgba(255, 255, 255, 0.6); /* adjusted for WCAG AA */
+  --white-30: rgba(255, 255, 255, 0.3);
   --white-10: rgba(255, 255, 255, 0.1);
 
   /* Gradients — rouge grenat, 100% burgundy */
@@ -82,12 +82,6 @@ p {
   text-wrap: pretty;
 }
 
-.text-intro {
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
-  color: var(--white);
-  font-weight: 500;
-}
-
 p + p {
   margin-top: 1rem;
 }
@@ -119,31 +113,6 @@ strong {
   letter-spacing: 0.15em;
   color: var(--accent);
   margin-bottom: 0.75rem;
-}
-
-.highlight-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.5rem 0;
-}
-
-.highlight-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--white-70);
-}
-
-.highlight-list li::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  flex-shrink: 0;
 }
 
 /* ───────────────────────────── BUTTONS ───────────────────────────── */

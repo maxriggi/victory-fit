@@ -47,7 +47,7 @@ const hasMedia = !!mediaSrc;
     )}
 
     <div class="content-section__body">
-      {label && <h3 class="section-label">{label}</h3>}
+      {label && <span class="section-label">{label}</span>}
       {title && <h2 class="content-section__title" set:html={title} />}
       <div class="content-section__text">
         <slot />

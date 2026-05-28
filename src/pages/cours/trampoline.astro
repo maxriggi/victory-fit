@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HeroSection from '../../components/HeroSection.astro';
+import ContentSection from '../../components/ContentSection.astro';
+import RelatedCourses from '../../components/RelatedCourses.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Trampoline — Victory Fit" description="Découvrez le cours Trampoline chez Victory Fit à Metz : un entraînement cardio fun, intense et à faible impact sur les articulations." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours', href: base + 'cours' }, { label: 'Trampoline' }]}>
+
+  <HeroSection
+    title="Trampoline"
+    highlightWord="Trampoline"
+    subtitle="Sautez, rebondissez, dépassez-vous — tout en protégeant vos articulations.<br><strong>Un cardio fun et intense chez Victory Fit.</strong>"
+    backgroundImage="https://images.unsplash.com/photo-1536336978327-65b24c1ec1da?w=1920&q=80"
+    ctas={[
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+    ]}
+  />
+
+  <!-- C'EST QUOI -->
+  <ContentSection
+    label="Le concept"
+    title="Un entraînement rebondissant, fun et intense"
+    mediaSrc="https://images.unsplash.com/photo-1692188105790-e15f93ed4adb?w=800&q=80"
+    mediaAlt="Cours de trampoline fitness"
+    mediaPosition="right"
+  >
+    <p>Le trampoline fitness, c'est un entraînement cardio complet sur mini-trampoline individuel. Chaque participant a son propre trampoline et enchaîne sauts, déplacements et mouvements rythmés par la musique.</p>
+    <p>Le rebond absorbe la majorité des chocs : vous travaillez intensément sans agresser vos genoux, vos chevilles ou votre dos.</p>
+    <p><strong>Le résultat : un cardio brûlant avec un impact minimal sur les articulations.</strong></p>
+  </ContentSection>
+
+  <!-- COMMENT CA MARCHE -->
+  <ContentSection
+    label="Équipement"
+    title="Comment ça marche ?"
+    mediaSrc="https://images.unsplash.com/photo-1515080797068-528074601098?w=800&q=80"
+    mediaAlt="Mini-trampoline fitness"
+    mediaPosition="left"
+    variant="dark"
+  >
+    <p>Chaque participant dispose d'un mini-trampoline individuel équipé d'une barre de stabilité pour s'appuyer si besoin.</p>
+    <ul>
+      <li>Mini-trampoline professionnel à ressorts ou sangles élastiques</li>
+      <li>Barre de maintien réglable pour sécuriser les débutants</li>
+      <li>Surface antidérapante pour des appuis stables</li>
+      <li>Environ 2m x 2m d'espace par personne</li>
+    </ul>
+    <p>L'équipement est vérifié à chaque séance. <strong>Sécurité et confort sont la priorité.</strong></p>
+  </ContentSection>
+
+  <!-- LES MOUVEMENTS -->
+  <ContentSection
+    label="Les exercices"
+    title="Des mouvements variés et rythmés"
+    mediaSrc="https://images.unsplash.com/photo-1692188105790-e15f93ed4adb?w=800&q=80"
+    mediaAlt="Mouvements trampoline"
+    mediaPosition="right"
+  >
+    <p>Les séances combinent plusieurs types de mouvements :</p>
+    <ul>
+      <li>Sauts de base et déplacements rythmés sur la musique</li>
+      <li>Course sur place et sprints pour booster le cardio</li>
+      <li>Squats et fentes amortis par le rebond</li>
+      <li>Travail des bras avec petites charges ou élastiques</li>
+      <li>Séquences chorégraphiées dynamiques</li>
+    </ul>
+    <p><strong>L'engagement du core est constant : chaque rebond sollicite les abdominaux profonds pour stabiliser le corps.</strong></p>
+  </ContentSection>
+
+  <!-- BENEFICES -->
+  <ContentSection
+    label="Les bénéfices"
+    title="Pourquoi le trampoline ?"
+    fullWidth={true}
+    variant="dark"
+  >
+    <ul>
+      <li>Faible impact sur les articulations — le rebond absorbe les chocs</li>
+      <li>Cardio intense — jusqu'à 600 calories par séance de 45 minutes</li>
+      <li>Gainage permanent — les abdominaux travaillent en continu pour stabiliser</li>
+      <li>Renforcement musculaire — jambes, fessiers et sangle abdominale sollicités</li>
+      <li>Équilibre et coordination — ajustements proprioceptifs constants</li>
+      <li>Stimulation du système lymphatique — drainage et récupération</li>
+      <li>Fun et adhérence — la sensation de rebondir donne envie de revenir</li>
+    </ul>
+  </ContentSection>
+
+  <!-- POUR QUI -->
+  <ContentSection
+    label="Pour qui ?"
+    title="Accessible à (presque) tous"
+    mediaSrc="https://images.unsplash.com/photo-1515080797068-528074601098?w=800&q=80"
+    mediaAlt="Groupe cours trampoline"
+    mediaPosition="left"
+  >
+    <p>Le trampoline est conçu pour être accessible à tous les niveaux. Le rebond facilite les mouvements et réduit l'impact par rapport aux exercices classiques.</p>
+    <ul>
+      <li>Tous les niveaux de condition physique</li>
+      <li>Idéal pour ceux qui ne supportent pas les impacts (genoux, chevilles, dos)</li>
+      <li>Adapté aux reprises d'activité après blessure ou pause</li>
+      <li>À partir de 16 ans</li>
+    </ul>
+    <p>Un questionnaire de santé est rempli avant la première séance. Non recommandé en cas de grossesse, problèmes cardiaques non contrôlés ou troubles de l'équilibre sévères.</p>
+  </ContentSection>
+
+  <!-- DEROULEMENT -->
+  <ContentSection
+    label="La séance"
+    title="Comment se déroule un cours ?"
+    mediaSrc="https://images.unsplash.com/photo-1536336978327-65b24c1ec1da?w=800&q=80"
+    mediaAlt="Séance trampoline Victory Fit"
+    mediaPosition="right"
+    variant="dark"
+  >
+    <ul>
+      <li>Accueil, mise en place et briefing sécurité — 5 min</li>
+      <li>Échauffement et prise en main du trampoline — 5 à 10 min</li>
+      <li>Entraînement principal sur musique — 25 à 35 min</li>
+      <li>Retour au calme et étirements — 5 min</li>
+    </ul>
+    <p>Groupes restreints pour un encadrement optimal. <strong>Durée totale : 45 à 60 minutes.</strong></p>
+  </ContentSection>
+
+  <RelatedCourses currentSlug="trampoline" />
+
+  <!-- FINAL CTA -->
+  <ContentSection
+    title="Prêt à rebondir chez Victory Fit ?"
+    fullWidth={true}
+    variant="gradient"
+    ctas={[
+      { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
+      { label: 'Essai gratuit', href: `${base}contact`, variant: 'secondary' },
+    ]}
+  >
+    <p><strong>La première victoire commence par une décision.</strong></p>
+  </ContentSection>
+
+</BaseLayout>

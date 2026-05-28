@@ -10,7 +10,7 @@ function isActive(path: string) {
 
 const courseLinks = [
   { label: 'Les Mills', href: `${base}cours/les-mills` },
-  { label: 'Bungee Fitness', href: `${base}cours/bungee-fitness` },
+  { label: 'Trampoline', href: `${base}cours/trampoline` },
   { label: 'Cardio Boxing', href: `${base}cours/boxe-training` },
   { label: 'Cardio Training', href: `${base}cours/cardio-training` },
   { label: 'Body Sculpt', href: `${base}cours/body-sculpt` },
@@ -310,12 +310,14 @@ const navLinks = [
     justify-content: center;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
   }
 
   .mobile-menu__links {

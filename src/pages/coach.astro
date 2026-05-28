@@ -33,7 +33,7 @@ const base = import.meta.env.BASE_URL;
     <p>Plus de 16 ans d'expérience dans le sport et le fitness.</p>
     <p>Un parcours international :</p>
     <ul>
-      <li>Tunisie (30 ans)</li>
+      <li>Tunisie (4 ans)</li>
       <li>Qatar (7 ans)</li>
       <li>France (depuis 2020)</li>
     </ul>
@@ -106,6 +106,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     title="Sa signature"
     fullWidth={true}
+    id="coach-signature"
   >
     <p>Dans ses cours, il y a une phrase qui revient souvent :</p>
     <blockquote>TU PEUX</blockquote>
@@ -189,6 +190,28 @@ const base = import.meta.env.BASE_URL;
   <style is:global>
     #coach-portrait .content-section__media img {
       object-position: top;
+    }
+    @media (min-width: 901px) {
+      #coach-portrait .content-section__media {
+        align-self: start;
+      }
+    }
+    #coach-signature blockquote {
+      border: none;
+      padding: 1.5rem 0;
+      margin: 1.5rem auto;
+      font-family: var(--font-heading);
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      text-align: center;
     }
   </style>
 </BaseLayout>

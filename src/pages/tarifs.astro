@@ -17,11 +17,23 @@ const base = import.meta.env.BASE_URL;
     ]}
   />
 
-  <section class="tarifs-section" data-aos="fade-up">
+  <section class="sportigo-section" data-aos="fade-up">
     <div class="container">
-      <img src={`${base}assets/tarifs-victoryfit.jpg`} alt="Grille tarifaire Victory Fit" class="tarifs-img" loading="lazy" />
+      <h2 class="sportigo-title">Choisissez votre formule</h2>
+      <div id="sportigo-buy-from-list-container"></div>
     </div>
   </section>
+
+  <script is:inline src="https://standalone.api.sportigo.fr/component-standalone.js"></script>
+  <script is:inline>
+    initComponent("BuyFromList", "sportigo-buy-from-list-container", "2b0a9501-fb94-49ab-bca8-d660557b76c1", {
+      "inline": false,
+      "hideFilters": false,
+      "initOfferPayment": {
+        "cancelable": false
+      }
+    });
+  </script>
 
   <ContentSection
     title="Prêt à nous rejoindre ?"
@@ -36,18 +48,16 @@ const base = import.meta.env.BASE_URL;
   </ContentSection>
 
   <style>
-    .tarifs-section {
+    .sportigo-section {
       padding: var(--section-padding);
     }
-
-    .tarifs-img {
-      width: 100%;
-      max-width: 900px;
-      height: auto;
-      display: block;
+    .sportigo-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #sportigo-buy-from-list-container {
+      max-width: 1100px;
       margin: 0 auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
   </style>
 </BaseLayout>

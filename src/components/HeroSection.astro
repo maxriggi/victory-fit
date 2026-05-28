@@ -3,7 +3,7 @@ interface Props {
   title: string;
   highlightWord?: string;
   subtitle: string;
-  backgroundImage?: string;
+  backgroundImage?: string | string[];
   ctas?: Array<{ label: string; href: string; variant?: 'primary' | 'secondary' }>;
   showLogo?: boolean;
 }
@@ -19,6 +19,8 @@ const {
   showLogo = false,
 } = Astro.props;
 
+const bgImages = Array.isArray(backgroundImage) ? backgroundImage : [backgroundImage];
+
 function renderTitle(title: string, highlightWord?: string) {
   if (!highlightWord) return title;
   return title.replace(highlightWord, `<span class="gradient-text">${highlightWord}</span>`);
@@ -26,8 +28,13 @@ function renderTitle(title: string, highlightWord?: string) {
 ---
 
 <section class="hero">
-  <div class="hero__bg">
-    <div class="hero__bg-image" style={`background-image: url('${backgroundImage}')`}></div>
+  <div class="hero__bg" data-rotate={bgImages.length > 1 ? 'true' : undefined}>
+    {bgImages.map((img, i) => (
+      <div
+        class="hero__bg-image"
+        style={`background-image: url('${img}'); --i: ${i}; --n: ${bgImages.length};`}
+      ></div>
+    ))}
     <div class="hero__bg-overlay"></div>
     <div class="hero__bg-glow"></div>
   </div>
@@ -81,6 +88,28 @@ function renderTitle(title: string, highlightWord?: string) {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.45;
+  }
+
+  .hero__bg[data-rotate] .hero__bg-image {
+    opacity: 0;
+    animation: heroRotate calc(6s * var(--n)) ease-in-out infinite;
+    animation-delay: calc(-6s * (var(--n) - var(--i)));
+  }
+
+  @keyframes heroRotate {
+    0%, 28% { opacity: 0.45; }
+    33%, 95% { opacity: 0; }
+    100% { opacity: 0.45; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__bg[data-rotate] .hero__bg-image {
+      animation: none;
+      opacity: 0.45;
+    }
+    .hero__bg[data-rotate] .hero__bg-image:not(:first-child) {
+      display: none;
+    }
   }
 
   .hero__bg-overlay {
@@ -159,6 +188,8 @@ function renderTitle(title: string, highlightWord?: string) {
   }
 
   .hero__ctas {
+    position: relative;
+    z-index: 6;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeSlideUp 0.8s ease-out 0.7s forwards;

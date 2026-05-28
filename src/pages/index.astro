@@ -8,14 +8,18 @@ import ReviewCard from '../components/ReviewCard.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Victory Fit — Sportivement Metz." description="Victory Fit, salle de sport au centre-ville de Metz : cours collectifs en présentiel et en illimité, coaching personnalisé, Bungee Fitness, Les Mills, EMS. Essai gratuit.">
+<BaseLayout title="Victory Fit — Sportivement Metz." description="Victory Fit, salle de sport au centre-ville de Metz : cours collectifs en présentiel et en illimité, coaching personnalisé, Trampoline, Les Mills, EMS. Essai gratuit.">
 
   <!-- HERO -->
   <HeroSection
     title="VICTORY FIT"
     highlightWord="VICTORY FIT"
     subtitle="La salle de sport du centre-ville de Metz dédiée aux cours collectifs en présentiel.<br><br>Énergie du groupe. Motivation du coach. Et cette sensation unique à la fin d'une séance : <strong>la victoire sur soi-même.</strong>"
-    backgroundImage="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=1920&q=80"
+    backgroundImage={[
+      'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=1920&q=80',
+      'https://images.unsplash.com/photo-1517130038641-a774d04afb3c?w=1920&q=80',
+      'https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?w=1920&q=80',
+    ]}
     showLogo={true}
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
@@ -27,9 +31,8 @@ const base = import.meta.env.BASE_URL;
   <!-- STATS -->
   <StatsBar
     stats={[
-      { number: '500+', label: 'Membres' },
       { number: '30+', label: 'Cours' },
-      { number: '7j/7', label: 'Accès' },
+      { number: '6j/7', label: 'Accès' },
       { number: '100%', label: 'Coaches certifiés' },
     ]}
   />
@@ -75,7 +78,7 @@ const base = import.meta.env.BASE_URL;
     title="Des cours dynamiques et variés"
     features={[
       { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11"/><path d="M3 10v4M21 10v4M5 8v8M19 8v8M8 6v12M16 6v12"/></svg>', title: 'Les Mills', description: 'Programmes reconnus mondialement pour leur efficacité et leur énergie.' },
-      { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4" r="2"/><path d="M12 6v4l-3 5M12 10l3 5M7 21l2-6M17 21l-2-6M9 14h6"/></svg>', title: 'Bungee Fitness', description: 'Sautez, volez et dépassez-vous avec le harnais élastique.' },
+      { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="18" rx="8" ry="2"/><path d="M4 18v1c0 1 1 2 2 2M20 18v1c0 1-1 2-2 2"/><path d="M12 3v6M9 6l3-3 3 3"/><circle cx="12" cy="11" r="2"/></svg>', title: 'Trampoline', description: 'Rebondissez et brûlez des calories en protégeant vos articulations.' },
       { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11h-4a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-4"/><path d="M8 4h4l2 4H6l2-4z"/><path d="M10 8v3M6 12v7a2 2 0 0 0 2 2h8"/></svg>', title: 'Cardio Boxing', description: 'Un entraînement explosif mêlant puissance, technique et cardio boxing.' },
       { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h1c1.5 0 2-1.5 3-1.5s1.5 1.5 3 1.5 2-1.5 3-1.5 1.5 1.5 3 1.5 2-1.5 3-1.5h1"/><path d="M3 8h1c1.5 0 2 1.5 3 1.5S8.5 8 10 8s2 1.5 3 1.5S14.5 8 16 8s2 1.5 3 1.5H21"/><rect x="5" y="14" width="14" height="4" rx="1"/></svg>', title: 'Renforcement', description: 'Body Sculpt et gainage pour tonifier et sculpter votre corps.' },
       { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>', title: 'EMS', description: 'Électrostimulation pour des résultats intensifs en un temps réduit.' },

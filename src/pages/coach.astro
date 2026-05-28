@@ -190,10 +190,14 @@ const base = import.meta.env.BASE_URL;
   <style is:global>
     #coach-portrait .content-section__media img {
       object-position: top;
+      aspect-ratio: 4 / 5;
     }
     @media (min-width: 901px) {
       #coach-portrait .content-section__media {
         align-self: start;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
     #coach-signature blockquote {
@@ -206,7 +210,7 @@ const base = import.meta.env.BASE_URL;
       font-size: clamp(2.5rem, 6vw, 4rem);
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
+      background: var(--gradient-text);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;

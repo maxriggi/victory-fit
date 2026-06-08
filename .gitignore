@@ -6,3 +6,6 @@ dist/
 build/
 .cache/
 .astro/
+
+# Matériel source / docs client — non destiné au repo public
+assets/_private/

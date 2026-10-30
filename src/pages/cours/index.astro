@@ -6,7 +6,7 @@ import CourseCard from '../../components/CourseCard.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout title="Les Cours — Victory Fit" description="Découvrez tous les cours Victory Fit : Les Mills, Trampoline, Boxe, Cardio, Body Sculpt, EMS, Step, Yoga et plus." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours' }]}>
+<BaseLayout title="Les Cours — Victory Fit" description="Découvrez tous les cours Victory Fit : Les Mills, Trampoline, Boxe, Cardio, Body Sculpt, Step, Yoga et plus." breadcrumbs={[{ label: 'Accueil', href: base }, { label: 'Les Cours' }]}>
 
   <!-- HERO -->
   <HeroSection
@@ -48,7 +48,6 @@ const base = import.meta.env.BASE_URL;
       { image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80', title: 'Cardio Boxing', description: 'Un entraînement explosif mêlant puissance, technique et cardio boxing.', href: `${base}cours/boxe-training` },
       { image: 'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800&q=80', title: 'Cardio Training', description: 'Séances HIIT pour brûler des calories et améliorer l\'endurance.', href: `${base}cours/cardio-training` },
       { image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80', title: 'Body Sculpt', description: 'Renforcement musculaire complet pour tonifier tout le corps.', href: `${base}cours/body-sculpt` },
-      { image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80', title: 'EMS', description: 'Électrostimulation en coaching privé pour des résultats intensifs.', href: `${base}cours/ems` },
       { image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', title: 'Step Freestyle', description: 'Cours chorégraphié mêlant cardio, coordination et rythme.', href: `${base}cours/step-freestyle` },
       { image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', title: 'Sport doux', description: 'Yoga, pilates et stretching pour le bien-être et la récupération.', href: `${base}cours/sport-doux` },
       { image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', title: 'Coaching personnalisé', description: 'Un accompagnement sur mesure adapté à vos objectifs.', href: `${base}coaching` },

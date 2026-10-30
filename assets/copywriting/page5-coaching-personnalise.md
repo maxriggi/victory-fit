@@ -117,24 +117,7 @@ Tous partagent la meme exigence : qualite, accompagnement et resultats.
 
 ---
 
-## 8. Coaching + EMS (option premium)
-
-> Photo EMS
-
-**OPTIMISEZ VOS RESULTATS**
-
-Possibilite d'integrer des seances d'electrostimulation (EMS) dans votre programme.
-
-Un travail musculaire intensif en un temps reduit.
-Disponible uniquement en coaching prive, avec un accompagnement personnalise.
-
-**Boutons :**
-- Nous contacter
-- Demander un bilan gratuit
-
----
-
-## 9. Final (CTA)
+## 8. Final (CTA)
 
 > Video fin seance / motivation
 

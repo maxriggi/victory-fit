@@ -7,4 +7,7 @@ export default defineConfig({
   site: 'https://victoryfit.fr',
   base: '/',
   integrations: [sitemap()],
+  redirects: {
+    '/cours/ems': '/cours',
+  },
 });

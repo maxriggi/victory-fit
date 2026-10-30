@@ -77,7 +77,6 @@ Victory Fit propose plusieurs types d'entrainement :
 - Renforcement
 - Cardio
 - Coaching personnalise
-- EMS
 - Seances fun et intenses
 
 Des cours concus pour progresser, se depasser et prendre plaisir a bouger.

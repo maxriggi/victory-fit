@@ -80,19 +80,7 @@ vous permettre de donner le meilleur de vous-meme, dans une ambiance positive et
 
 ---
 
-## 6. L'electrostimulation
-
-> Photo EMS
-
-Victory Fit propose egalement des seances d'electrostimulation musculaire.
-
-Cette technologie permet de solliciter les muscles de maniere tres intense en un temps reduit.
-
-Ideal pour renforcer, tonifier et optimiser ses seances.
-
----
-
-## 7. Le coaching prive
+## 6. Le coaching prive
 
 > Photo seance individuelle
 
@@ -102,7 +90,7 @@ Objectifs sportifs, remise en forme, progression specifique : le programme est a
 
 ---
 
-## 8. L'esprit Victory Fit
+## 7. L'esprit Victory Fit
 
 > Photo groupe / ambiance / sourire
 
@@ -123,7 +111,7 @@ L'important est de progresser, de partager l'energie du groupe et de repartir av
 
 ---
 
-## 9. Suivre l'energie Victory Fit
+## 8. Suivre l'energie Victory Fit
 
 > Bloc Instagram
 
@@ -136,7 +124,7 @@ Retrouvez les moments forts des cours, les coulisses de la salle et l'energie Vi
 
 ---
 
-## 10. Final (CTA)
+## 9. Final (CTA)
 
 > Video ambiance de fin de cours / high five
 

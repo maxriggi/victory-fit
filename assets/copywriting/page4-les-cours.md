@@ -160,33 +160,7 @@ Des seances accessibles, progressives et adaptees a tous les niveaux.
 
 ---
 
-## 8. Electrostimulation (EMS)
-
-> Photo seance EMS
-
-**ELECTROSTIMULATION (EMS)**
-
-Une technologie innovante permettant de solliciter les muscles en profondeur grace a des impulsions electriques.
-
-Des seances courtes mais tres efficaces, ideales pour optimiser les resultats.
-
-Un entrainement parfait pour :
-- Renforcer les muscles
-- Tonifier le corps
-- Gagner du temps
-- Completer les cours collectifs
-
-Les seances EMS sont proposees en coaching prive, avec un accompagnement personnalise et un tarif specifique.
-Accessible a tous, avec un suivi adapte a chaque objectif.
-
-**Boutons :**
-- Reserver une seance EMS
-- Nous contacter
-- Je rejoins la famille Victory Fit
-
----
-
-## 9. Coaching personnalise
+## 8. Coaching personnalise
 
 > Photo seance individuelle
 
@@ -216,7 +190,7 @@ Les seances se font sur reservation, avec un accompagnement personnalise.
 
 ---
 
-## 10. Step Freestyle
+## 9. Step Freestyle
 
 > Photo cours de step
 
@@ -245,7 +219,7 @@ Accessible a tous, avec des niveaux progressifs.
 
 ---
 
-## 11. Sport doux & relaxation
+## 10. Sport doux & relaxation
 
 > Photo yoga / pilates
 
@@ -271,7 +245,7 @@ Ideal pour :
 
 ---
 
-## 12. Pour tous les niveaux
+## 11. Pour tous les niveaux
 
 > Photo groupe varie
 
@@ -290,7 +264,7 @@ Ici, il n'y a pas de jugement. Seulement :
 
 ---
 
-## 13. L'experience Victory Fit
+## 12. L'experience Victory Fit
 
 > Video ambiance
 
@@ -309,7 +283,7 @@ Et toujours cette sensation :
 
 ---
 
-## 14. Final (CTA)
+## 13. Final (CTA)
 
 > Video fin de seance
 

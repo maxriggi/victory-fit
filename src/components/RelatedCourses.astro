@@ -7,12 +7,12 @@ const base = import.meta.env.BASE_URL;
 const { currentSlug } = Astro.props;
 
 const allCourses = [
-  { slug: 'les-mills', label: 'Les Mills', description: 'Programmes fitness reconnus dans le monde entier, rythmés par la musique.', image: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=600&q=80' },
+  { slug: 'les-mills', label: 'Les Mills', description: 'Programmes fitness reconnus dans le monde entier, rythmés par la musique.', image: `${base}assets/cours-barre-16x9-victoryfit.webp` },
   { slug: 'trampoline', label: 'Trampoline', description: 'Rebondir, se dépasser et brûler des calories en protégeant ses articulations.', image: 'https://images.unsplash.com/photo-1692188105790-e15f93ed4adb?w=600&q=80' },
   { slug: 'boxe-training', label: 'Boxe Training', description: 'Défoulement total inspiré des sports de combat, zéro contact.', image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&q=80' },
-  { slug: 'cardio-training', label: 'Cardio Training', description: 'HIIT et entraînement cardio haute intensité.', image: 'https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=600&q=80' },
-  { slug: 'body-sculpt', label: 'Body Sculpt', description: 'Renforcement musculaire complet au poids du corps et avec charges légères.', image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&q=80' },
-  { slug: 'step-freestyle', label: 'Step Freestyle', description: 'Chorégraphies dynamiques sur step, cardio et coordination.', image: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=80' },
+  { slug: 'cardio-training', label: 'Cardio Training', description: 'HIIT et entraînement cardio haute intensité.', image: `${base}assets/salle-cardio-16x9-victoryfit.webp` },
+  { slug: 'body-sculpt', label: 'Body Sculpt', description: 'Renforcement musculaire complet au poids du corps et avec charges légères.', image: `${base}assets/squat-binome-16x9-victoryfit.webp` },
+  { slug: 'step-freestyle', label: 'Step Freestyle', description: 'Chorégraphies dynamiques sur step, cardio et coordination.', image: `${base}assets/step-16x9-victoryfit.webp` },
   { slug: 'sport-doux', label: 'Sport Doux', description: 'Yoga, Pilates, stretching — bien-être et souplesse.', image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80' },
 ];
 
@@ -90,6 +90,7 @@ const related = allCourses.filter(c => c.slug !== currentSlug);
   .related-card__image img {
     display: block;
     width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     transition: transform 0.4s ease;

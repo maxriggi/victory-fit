@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
     title="Nasr"
     highlightWord="Nasr"
     subtitle="Coach sportif. Énergie. Expérience. Résultats.<br>Ici, on ne suit pas juste un programme. On s'entraîne avec quelqu'un qui vit le sport."
-    backgroundImage="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=1920&q=80"
+    backgroundImage={`${base}assets/equipe-16x9-victoryfit.webp`}
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Réserver un cours d\'essai gratuit', href: `${base}cours-essai`, variant: 'secondary' },
@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Le fondateur"
     title="Nasr"
-    mediaSrc={`${base}assets/nasr-jaziri-coach-victoryfit.jpg`}
+    mediaSrc={`${base}assets/nasr-portrait-4x5-victoryfit.webp`}
     mediaAlt="Nasr Jaziri, fondateur et coach de Victory Fit"
     mediaPosition="right"
     id="coach-portrait"
@@ -46,8 +46,8 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="L'histoire"
     title="La naissance de Victory Fit"
-    mediaSrc="https://images.unsplash.com/photo-1605296867424-35fc25c9212a?w=800&q=80"
-    mediaAlt="Victory Fit"
+    mediaSrc={`${base}assets/logo-neon-victoryfit.webp`}
+    mediaAlt="Logo néon Victory Fit dans la salle"
     mediaPosition="left"
     variant="dark"
   >
@@ -79,7 +79,7 @@ const base = import.meta.env.BASE_URL;
   <!-- LE SPORT COMME ALLIÉ SANTÉ -->
   <ContentSection
     title="Le sport comme allié santé"
-    mediaSrc="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80"
+    mediaSrc={`${base}assets/squat-binome-victoryfit.webp`}
     mediaAlt="Sport et santé"
     mediaPosition="right"
   >
@@ -92,8 +92,8 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Son approche"
     title="Le coaching au cœur de chaque séance"
-    mediaSrc="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
-    mediaAlt="Nasr corrige un participant"
+    mediaSrc={`${base}assets/cours-barre-salle-victoryfit.webp`}
+    mediaAlt="Cours collectif avec barres chez Victory Fit"
     mediaPosition="left"
     variant="dark"
   >
@@ -132,7 +132,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Son objectif"
     title="Vous faire dépasser vos limites"
-    mediaSrc="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80"
+    mediaSrc={`${base}assets/groupe-octobre-rose-victoryfit.webp`}
     mediaAlt="Fin de séance Victory Fit"
     mediaPosition="right"
   >
@@ -144,8 +144,8 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Coaching privé"
     title="Coaching personnalisé"
-    mediaSrc="https://images.unsplash.com/photo-1594381898411-846e7d193883?w=800&q=80"
-    mediaAlt="Séance individuelle"
+    mediaSrc={`${base}assets/coach-energie-victoryfit.webp`}
+    mediaAlt="Coach Victory Fit"
     mediaPosition="left"
     variant="dark"
     ctas={[

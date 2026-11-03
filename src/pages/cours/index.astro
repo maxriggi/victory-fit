@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
     title="Les cours Victory Fit"
     highlightWord="Victory Fit"
     subtitle="Des entraînements variés, dynamiques et accessibles à tous.<br>Des cours collectifs en présentiel et en illimité, au cœur du centre-ville de Metz.<br><br>Ici, chaque séance est différente. Mais l'objectif reste le même : <strong>se dépasser, progresser et prendre du plaisir.</strong>"
-    backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
+    backgroundImage={`${base}assets/cours-plein-16x9-victoryfit.webp`}
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Réserver un cours d\'essai gratuit', href: `${base}cours-essai`, variant: 'secondary' },
@@ -24,7 +24,7 @@ const base = import.meta.env.BASE_URL;
   <!-- COURS COLLECTIFS -->
   <ContentSection
     title="Les cours collectifs"
-    mediaSrc="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+    mediaSrc={`${base}assets/cours-plein-victoryfit.webp`}
     mediaAlt="Cours collectifs Victory Fit"
     mediaPosition="right"
     ctas={[
@@ -43,14 +43,14 @@ const base = import.meta.env.BASE_URL;
     label="Nos cours"
     title="Trouvez votre entraînement"
     courses={[
-      { image: 'https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80', title: 'Les Mills', description: 'Programmes rythmés par la musique, structurés et motivants.', href: `${base}cours/les-mills` },
+      { image: `${base}assets/cours-barre-16x9-victoryfit.webp`, title: 'Les Mills', description: 'Programmes rythmés par la musique, structurés et motivants.', href: `${base}cours/les-mills` },
       { image: 'https://images.unsplash.com/photo-1692188105790-e15f93ed4adb?w=800&q=80', title: 'Trampoline', description: 'Rebondissez et brûlez des calories tout en protégeant vos articulations.', href: `${base}cours/trampoline` },
       { image: 'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=800&q=80', title: 'Cardio Boxing', description: 'Un entraînement explosif mêlant puissance, technique et cardio boxing.', href: `${base}cours/boxe-training` },
-      { image: 'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=800&q=80', title: 'Cardio Training', description: 'Séances HIIT pour brûler des calories et améliorer l\'endurance.', href: `${base}cours/cardio-training` },
-      { image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80', title: 'Body Sculpt', description: 'Renforcement musculaire complet pour tonifier tout le corps.', href: `${base}cours/body-sculpt` },
-      { image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80', title: 'Step Freestyle', description: 'Cours chorégraphié mêlant cardio, coordination et rythme.', href: `${base}cours/step-freestyle` },
+      { image: `${base}assets/salle-cardio-16x9-victoryfit.webp`, title: 'Cardio Training', description: 'Séances HIIT pour brûler des calories et améliorer l\'endurance.', href: `${base}cours/cardio-training` },
+      { image: `${base}assets/squat-binome-16x9-victoryfit.webp`, title: 'Body Sculpt', description: 'Renforcement musculaire complet pour tonifier tout le corps.', href: `${base}cours/body-sculpt` },
+      { image: `${base}assets/step-16x9-victoryfit.webp`, title: 'Step Freestyle', description: 'Cours chorégraphié mêlant cardio, coordination et rythme.', href: `${base}cours/step-freestyle` },
       { image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80', title: 'Sport doux', description: 'Yoga, pilates et stretching pour le bien-être et la récupération.', href: `${base}cours/sport-doux` },
-      { image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', title: 'Coaching personnalisé', description: 'Un accompagnement sur mesure adapté à vos objectifs.', href: `${base}coaching` },
+      { image: `${base}assets/coaching-halteres-victoryfit.webp`, title: 'Coaching personnalisé', description: 'Un accompagnement sur mesure adapté à vos objectifs.', href: `${base}coaching` },
     ]}
   />
 

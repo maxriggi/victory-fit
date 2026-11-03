@@ -16,9 +16,9 @@ const base = import.meta.env.BASE_URL;
     highlightWord="VICTORY FIT"
     subtitle="La salle de sport du centre-ville de Metz dédiée aux cours collectifs en présentiel.<br><br>Énergie du groupe. Motivation du coach. Et cette sensation unique à la fin d'une séance : <strong>la victoire sur soi-même.</strong>"
     backgroundImage={[
-      'https://images.unsplash.com/photo-1554284126-aa88f22d8b74?w=1920&q=80',
-      'https://images.unsplash.com/photo-1517130038641-a774d04afb3c?w=1920&q=80',
-      'https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?w=1920&q=80',
+      `${base}assets/cours-plein-16x9-victoryfit.webp`,
+      `${base}assets/equipe-16x9-victoryfit.webp`,
+      `${base}assets/cours-collectif-16x9-victoryfit.webp`,
     ]}
     showLogo={true}
     ctas={[
@@ -41,8 +41,8 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Le concept"
     title="L'énergie du collectif"
-    mediaSrc="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=800&q=80"
-    mediaAlt="Cours collectif Victory Fit"
+    mediaSrc={`${base}assets/soiree-halloween-victoryfit.webp`}
+    mediaAlt="Soirée Halloween chez Victory Fit"
     mediaPosition="right"
     ctas={[
       { label: 'Découvrir le concept', href: `${base}concept`, variant: 'primary' },
@@ -57,7 +57,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Le coach"
     title="Nasr"
-    mediaSrc="https://images.unsplash.com/photo-1550345332-09e3ac987658?w=800&q=80"
+    mediaSrc={`${base}assets/nasr-portrait-victoryfit.webp`}
     mediaAlt="Nasr, coach Victory Fit"
     mediaPosition="left"
     variant="dark"
@@ -89,7 +89,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Planning"
     title="Un planning simple et flexible"
-    mediaSrc="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&q=80"
+    mediaSrc={`${base}assets/cours-plein-victoryfit.webp`}
     mediaAlt="Cours plein Victory Fit"
     mediaPosition="left"
     variant="dark"
@@ -106,7 +106,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Tarifs"
     title="Des cours collectifs en présentiel et en illimité"
-    mediaSrc="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80"
+    mediaSrc={`${base}assets/cours-barre-victoryfit.webp`}
     mediaAlt="Ambiance Victory Fit"
     mediaPosition="right"
     ctas={[

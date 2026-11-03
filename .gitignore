@@ -9,3 +9,7 @@ build/
 
 # Matériel source / docs client — non destiné au repo public
 assets/_private/
+
+# Photos sources (originaux client)
+assets/Photos Salle victoryfit/
+assets/*.zip

@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL;
     title="Step Freestyle"
     highlightWord="Step"
     subtitle="Un cours dynamique et rythmé basé sur des enchaînements chorégraphiés autour du step.<br><strong>Cardio, coordination et plaisir.</strong>"
-    backgroundImage="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=1920&q=80"
+    backgroundImage={`${base}assets/step-groupe-16x9-victoryfit.webp`}
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Essai gratuit', href: `${base}cours-essai`, variant: 'secondary' },
@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Le concept"
     title="Bougez au rythme de la musique"
-    mediaSrc="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800&q=80"
+    mediaSrc={`${base}assets/step-victoryfit.webp`}
     mediaAlt="Step Freestyle"
     mediaPosition="right"
   >

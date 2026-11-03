@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
     title="Les Mills"
     highlightWord="Les Mills"
     subtitle="Des programmes de fitness reconnus dans le monde entier, conçus par des experts et rythmés par la musique.<br><strong>Disponibles chez Victory Fit à Metz.</strong>"
-    backgroundImage="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1920&q=80"
+    backgroundImage={`${base}assets/cours-plein-16x9-victoryfit.webp`}
     ctas={[
       { label: 'Voir le planning', href: `${base}planning`, variant: 'primary' },
       { label: 'Essai gratuit', href: `${base}cours-essai`, variant: 'secondary' },
@@ -33,7 +33,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     label="Le concept"
     title="Une méthode prouvée scientifiquement"
-    mediaSrc="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&q=80"
+    mediaSrc={`${base}assets/cours-collectif-victoryfit.webp`}
     mediaAlt="Les Mills cours collectif"
     mediaPosition="right"
   >
@@ -46,7 +46,7 @@ const base = import.meta.env.BASE_URL;
   <ContentSection
     title="BodyPump"
     label="Renforcement musculaire"
-    mediaSrc="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&q=80"
+    mediaSrc={`${base}assets/cours-barre-victoryfit.webp`}
     mediaAlt="BodyPump"
     mediaPosition="left"
     variant="dark"
